@@ -1,0 +1,50 @@
+.question{
+   width: 100%;
+   max-width: 908px;
+}
+
+.testName{
+   margin-bottom: 42px;
+   font-size: 36px;
+   font-weight: 700;
+   color: var(--blue);
+}
+
+.questionTitleWrap{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 25px;
+   margin-bottom: 40px;
+}
+
+.questionTitle{
+   font-size: 32px;
+   font-weight: 500;
+}
+
+.quesyionSelection{
+   font-size: 24px;
+   color: #4B4B4B;
+}
+
+.controls{
+   display: flex;
+   height: 328px;
+}
+
+.submitBtn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 41%;
+   background-color: var(--super-light-blue);
+}
+
+.submitBtn:hover{
+  background-color: var(--light-blue);
+}
+
+.submitBtn:hover svg{
+   fill: #FFF;
+}
