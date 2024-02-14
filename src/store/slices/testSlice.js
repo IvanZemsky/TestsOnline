@@ -5,11 +5,14 @@ const testSlice = createSlice({
    initialState: {
       currentQuestionIndex: 0,
       result: 0,
-      history: []
+      history: [] // {questionIndex, selectedAnswerIndex, correctAnswerIndex}
    },
    reducers: {
       nextStep(state, action) {
          const {selectedAnswerIndex, correctAnswerIndex} = action.payload
+
+         if (selectedAnswerIndex === null) return
+
          if (selectedAnswerIndex === correctAnswerIndex) {
             state.result++
          }

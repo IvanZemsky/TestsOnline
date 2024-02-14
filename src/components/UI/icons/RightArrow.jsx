@@ -1,12 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
 
-const RightArrow = () => {
+const RightArrow = memo(({fill}) => {
    return (
       <svg
          width="42"
          height="74"
          viewBox="0 0 42 74"
-         fill="#BBD6FF"
+         fill={fill}
          xmlns="http://www.w3.org/2000/svg"
       >
          <path
@@ -15,6 +15,6 @@ const RightArrow = () => {
          />
       </svg>
    );
-};
+});
 
 export default RightArrow;

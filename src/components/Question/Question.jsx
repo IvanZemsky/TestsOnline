@@ -5,28 +5,19 @@ import { nextStep } from "../../store/slices/testSlice";
 import AnswerList from "../AnswerList/AnswerList";
 import styles from "./Question.module.css";
 import ProgressLine from "../UI/ProgressLine/ProgressLine";
-import RightArrow from '../UI/icons/RightArrow'
 
 const Question = ({ testId }) => {
+   const dispatch = useDispatch();
+
    const currentQuestionIndex = useSelector(
       (state) => state.test.currentQuestionIndex
    );
-   const dispatch = useDispatch();
 
-   const test = useMemo(() => tests.find((test) => test.id === +testId));
+   const test = useMemo(() => tests.find((test) => test.id === +testId), []);
    console.log(test);
    const currentQuestion = test.questions[currentQuestionIndex];
    const answers = currentQuestion.answers;
    const questionAmount = test.questions.length;
-
-   const handleAnswerClick = (selectedAnswerIndex, correctAnswerIndex) => {
-      dispatch(
-         nextStep({
-            selectedAnswerIndex,
-            correctAnswerIndex,
-         })
-      );
-   };
 
    return (
       <section className={styles.question}>
@@ -38,23 +29,16 @@ const Question = ({ testId }) => {
          />
 
          <div className={styles.questionTitleWrap}>
-            <h2 className={styles.questionTitle}>
-               {currentQuestion.title}
-            </h2>
-            <p className={styles.quesyionSelection}>
-               <span>0</span>
-               /
-               <span>1</span>
+            <h2 className={styles.questionTitle}>{currentQuestion.title}</h2>
+            <p className={styles.questionSelection}>
+               <span>0</span>/<span>1</span>
             </p>
          </div>
 
-         <div className={styles.controls}>
-            <AnswerList answers={answers} />
-
-            <button type="submit" className={styles.submitBtn}>
-               <RightArrow />
-            </button>
-         </div>
+         <AnswerList
+            answers={answers}
+            correctAnswerIndex={currentQuestion.correctAnswer}
+         />
       </section>
    );
 };

@@ -1,15 +1,15 @@
 .header{
    padding: 15px 0;
-   background-color: #1f1f1f;
+   background-color: var(--sky-blue);
    color: white;
 }
 
-.header__content{
+.content{
    display: flex;
    align-items: center;
    gap: 30px;
 }
 
-.header__logo{
+.logo{
    font-weight: 700;
 }

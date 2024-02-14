@@ -7,6 +7,7 @@ import './basicStyles/_vars.css'
 import { Route, Routes } from "react-router-dom";
 import Tests from "./pages/Tests/Tests";
 import TestPage from "./pages/TestPage/TestPage";
+import ResultPage from './pages/ResultPage/ResultPage'
 
 const App = () => {
    return (
@@ -15,6 +16,7 @@ const App = () => {
          <Routes>
             <Route path="/" element={<Tests />} />
             <Route path="/test/:id" element={<TestPage />} />
+            <Route path="/test/:id/result" element={<ResultPage />} />
          </Routes>
       </div>
    );
