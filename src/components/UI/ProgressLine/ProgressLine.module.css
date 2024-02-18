@@ -1,7 +1,7 @@
 .progressWrap{
    position: relative;
    width: 100%;
-   margin-bottom: 42px;
+   margin-bottom: 15px;
 }
 
 .progressInfo{
@@ -31,4 +31,5 @@
 
 .progressLine::-webkit-progress-value{
    background-color: var(--light-blue);
+   transition: all 0.12s linear;
 }

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import styles from "./Answer.module.css";
 
 const Answer = memo(({ answer, id, value, setSelectedAnswerIndex }) => {
+
    return (
       <div className={styles.answer}>
          <input
@@ -13,7 +14,10 @@ const Answer = memo(({ answer, id, value, setSelectedAnswerIndex }) => {
             value={value}
             onClick={(e) => setSelectedAnswerIndex(e.target.value)}
          />
-         <label className={styles.answerText} htmlFor={id}>
+         <label
+            className={styles.answerText}
+            htmlFor={id}
+         >
             {answer}
          </label>
       </div>

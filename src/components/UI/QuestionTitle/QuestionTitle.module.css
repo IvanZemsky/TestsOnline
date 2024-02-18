@@ -1,0 +1,17 @@
+.questionTitleWrap{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 25px;
+   margin-bottom: 40px;
+}
+
+.questionTitle{
+   font-size: 32px;
+   font-weight: 500;
+}
+
+.questionSelection{
+   font-size: 24px;
+   color: #4B4B4B;
+}

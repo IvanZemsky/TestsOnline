@@ -8,19 +8,3 @@
    flex-direction: column;
    width: 59%;
 }
-
-.submitBtn{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 41%;
-   background-color: var(--super-light-blue);
-}
-
-.submitBtn:hover{
-  background-color: var(--light-blue);
-}
-
-.submitBtn:hover svg{
-   fill: #FFF;
-}

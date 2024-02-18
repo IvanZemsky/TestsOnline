@@ -1,5 +1,6 @@
 import React, { memo, useEffect } from "react";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
    useEffect(() => console.log("header render " + Date.now()));
@@ -10,6 +11,7 @@ const Header = () => {
             <a href="#" className={styles.logo}>
                QuestsWebSite
             </a>
+            <Link to="/">Тесты</Link>
          </div>
       </header>
    );

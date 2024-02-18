@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Answer from "../Answer/Answer";
 import styles from "./AnswerList.module.css";
-import RightArrow from "../UI/icons/RightArrow";
 import { useDispatch } from "react-redux";
-import { nextStep } from "../../store/slices/testSlice";
+import { nextQuestion, addToResults } from "../../store/slices/testSlice";
+import { useNavigate } from "react-router-dom";
+import NextQuestionBtn from "../UI/NextQuestionBtn/NextQuestionBtn";
 
-const AQUA = "#BBD6FF";
+const AnswerList = (props) => {
+   const { testId, answers, questionAmount, currentQuestionIndex, correctAnswerIndex } = props
 
-const AnswerList = ({ answers, correctAnswerIndex }) => {
    const dispatch = useDispatch();
+   const navigate = useNavigate();
 
    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
 
    useEffect(() => console.log(selectedAnswerIndex));
 
-   const handleAnswerClick = (selectedAnswerIndex, correctAnswerIndex) => {
-      dispatch(
-         nextStep({
-            selectedAnswerIndex,
-            correctAnswerIndex,
-         })
-      );
-   };
-
-   const onAnswerClick = event => {
+   const onNextQuestionClick = (event) => {
       event.preventDefault();
-      handleAnswerClick(selectedAnswerIndex, correctAnswerIndex);
+      if (currentQuestionIndex >= questionAmount - 1) {
+         dispatch(addToResults({selectedAnswerIndex, correctAnswerIndex}))
+         navigate(`/test/${testId}/result`);
+         return;
+      }
+      dispatch(addToResults({selectedAnswerIndex, correctAnswerIndex}))
+      dispatch(nextQuestion({selectedAnswerIndex, correctAnswerIndex}))
       setSelectedAnswerIndex(null);
    }
 
@@ -34,7 +33,7 @@ const AnswerList = ({ answers, correctAnswerIndex }) => {
          <div className={styles.answersList}>
             {answers.map((answer, i) => (
                <Answer
-                  key={answer + i}
+                  key={answer + i + currentQuestionIndex}
                   answer={answer}
                   id={"answer" + i}
                   value={i}
@@ -42,13 +41,7 @@ const AnswerList = ({ answers, correctAnswerIndex }) => {
                />
             ))}
          </div>
-         <button
-            type="submit"
-            className={styles.submitBtn}
-            onClick={onAnswerClick}
-         >
-            <RightArrow fill={AQUA} />
-         </button>
+         <NextQuestionBtn onNextQuestionClick={onNextQuestionClick}/>
       </form>
    );
 };
