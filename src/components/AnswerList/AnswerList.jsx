@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from "react";
 import Answer from "../Answer/Answer";
 import styles from "./AnswerList.module.css";
-import { useDispatch } from "react-redux";
-import { nextQuestion, addToResults } from "../../store/slices/testSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { nextQuestion, addToCurrentResult, addToResults } from "../../store/slices/testSlice";
 import { useNavigate } from "react-router-dom";
 import NextQuestionBtn from "../UI/NextQuestionBtn/NextQuestionBtn";
 
 const AnswerList = (props) => {
-   const { testId, answers, questionAmount, currentQuestionIndex, correctAnswerIndex } = props
+   const { testId, answers, questionAmount, currentQuestionIndex, correctAnswerIndex } = props;
 
    const dispatch = useDispatch();
    const navigate = useNavigate();
 
    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
 
-   useEffect(() => console.log(selectedAnswerIndex));
-
    const onNextQuestionClick = (event) => {
       event.preventDefault();
+      if (selectedAnswerIndex === null) return;
+
       if (currentQuestionIndex >= questionAmount - 1) {
-         dispatch(addToResults({selectedAnswerIndex, correctAnswerIndex}))
-         navigate(`/test/${testId}/result`);
+         dispatch(addToCurrentResult({selectedAnswerIndex, correctAnswerIndex}))
+         dispatch(addToResults({testId}))
+         navigate(`/test/${testId}/result`); // currentTestResult будет очищен
          return;
       }
-      dispatch(addToResults({selectedAnswerIndex, correctAnswerIndex}))
-      dispatch(nextQuestion({selectedAnswerIndex, correctAnswerIndex}))
+      
+      dispatch(addToCurrentResult({selectedAnswerIndex, correctAnswerIndex}))
+      dispatch(nextQuestion({selectedAnswerIndex}))
       setSelectedAnswerIndex(null);
    }
 
@@ -35,7 +37,7 @@ const AnswerList = (props) => {
                <Answer
                   key={answer + i + currentQuestionIndex}
                   answer={answer}
-                  id={"answer" + i}
+                  id={"answer" + i + currentQuestionIndex}
                   value={i}
                   setSelectedAnswerIndex={setSelectedAnswerIndex}
                />

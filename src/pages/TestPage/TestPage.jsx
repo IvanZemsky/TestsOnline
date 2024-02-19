@@ -5,7 +5,10 @@ import Question from "../../components/Question/Question";
 import tests from "../../tests";
 import { useDispatch, useSelector } from "react-redux";
 import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
-import { clearCurrentTestData } from "../../store/slices/testSlice";
+import {
+   clearCurrentTestData,
+   setCurrentTest,
+} from "../../store/slices/testSlice";
 
 const TestPage = () => {
    const dispatch = useDispatch();
@@ -17,13 +20,11 @@ const TestPage = () => {
       (state) => state.test.currentQuestionIndex
    );
 
-   const test = useMemo(() => tests.find((test) => test.id === id), [id]);
+   const test = useMemo(() => tests.find((test) => test.id === id), [id]); // переписать на запросы
 
    useEffect(() => {
-      return () => {
-         console.log("unmounted");
-         dispatch(clearCurrentTestData());
-      };
+      dispatch(clearCurrentTestData());
+      dispatch(setCurrentTest(test));
    }, []);
 
    return (

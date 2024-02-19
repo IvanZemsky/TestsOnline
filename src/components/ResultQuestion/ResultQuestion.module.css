@@ -1,0 +1,5 @@
+.question{
+   border: 2px solid var(--sky-blue);
+   padding: 15px;
+   margin-bottom: 15px;
+}
