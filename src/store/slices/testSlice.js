@@ -1,32 +1,31 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { current } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
+
+const initialState = {
+   currentTest: {},
+   currentQuestionIndex: 0,
+   currentResult: [], // {questionIndex, selectedAnswerIndex, correctAnswerIndex}
+   currentResultCounter: 0,
+}
 
 const testSlice = createSlice({
    name: "test",
-   initialState: {
-      currentTest: {},
-      currentQuestionIndex: 0,
-      currentResult: [], // {questionIndex, selectedAnswerIndex, correctAnswerIndex}
-      currentResultCounter: 0,
-      results: [], // {testId, {questionIndex, selectedAnswerIndex, correctAnswerIndex}[]}
-   },
+   initialState,
    reducers: {
       setCurrentTest(state, action) {
          state.currentTest = action.payload;
+         console.log("cleared", current(state)); // ***
       },
 
       nextQuestion(state) {
-         //if (selectedAnswerIndex === null) return;
-         // console.info(current(state)); // ***
          state.currentQuestionIndex++;
       },
 
       addToCurrentResult(state, action) {
          const { selectedAnswerIndex, correctAnswerIndex } = action.payload;
-         //if (selectedAnswerIndex === null) return;
 
          if (+selectedAnswerIndex === correctAnswerIndex) {
             state.currentResultCounter++;
+            console.info(state.currentResultCounter);
          }
 
          state.currentResult.push({
@@ -35,25 +34,11 @@ const testSlice = createSlice({
             correctAnswerIndex,
          });
 
-         console.info(current(state.currentResult))
+         console.info(current(state.currentResult)); // ***
       },
 
-      addToResults(state, action) {
-         const { testId } = action.payload;
-         state.results.push({
-            testId,
-            resultCounter: state.resultCounter,
-            results: [...state.currentResult],
-         });
-         console.info(current(state.results)); // ***
-      },
+      clearCurrentTestState: () => initialState,
 
-      clearCurrentTestData(state) {
-         state.currentQuestionIndex = 0;
-         state.currentResult = [];
-         state.currentResultCounter = 0;
-         console.log("cleared", current(state));
-      },
    },
 });
 
@@ -63,6 +48,5 @@ export const {
    setCurrentTest,
    nextQuestion,
    addToCurrentResult,
-   addToResults,
-   clearCurrentTestData,
+   clearCurrentTestState
 } = testSlice.actions;

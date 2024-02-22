@@ -1,7 +1,10 @@
 .header{
    padding: 15px 0;
    background-color: var(--sky-blue);
-   color: white;
+}
+
+.header a {
+   color: #fff;
 }
 
 .content{

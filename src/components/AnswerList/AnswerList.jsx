@@ -2,33 +2,41 @@ import React, { useEffect, useState } from "react";
 import Answer from "../Answer/Answer";
 import styles from "./AnswerList.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { nextQuestion, addToCurrentResult, addToResults } from "../../store/slices/testSlice";
+import { nextQuestion, addToCurrentResult } from "../../store/slices/testSlice";
+import { addToResults } from "../../store/slices/resultsSlice";
 import { useNavigate } from "react-router-dom";
 import NextQuestionBtn from "../UI/NextQuestionBtn/NextQuestionBtn";
 
 const AnswerList = (props) => {
-   const { testId, answers, questionAmount, currentQuestionIndex, correctAnswerIndex } = props;
+   const {
+      testId,
+      answers,
+      questionAmount,
+      currentQuestionIndex,
+      correctAnswerIndex,
+   } = props;
 
    const dispatch = useDispatch();
    const navigate = useNavigate();
 
    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+   const testsState = useSelector((state) => state.test);
 
    const onNextQuestionClick = (event) => {
-      event.preventDefault();
-      if (selectedAnswerIndex === null) return;
 
       if (currentQuestionIndex >= questionAmount - 1) {
-         dispatch(addToCurrentResult({selectedAnswerIndex, correctAnswerIndex}))
-         dispatch(addToResults({testId}))
+         dispatch(
+            addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex })
+         );
+         dispatch(addToResults(testsState));
          navigate(`/test/${testId}/result`); // currentTestResult будет очищен
          return;
       }
-      
-      dispatch(addToCurrentResult({selectedAnswerIndex, correctAnswerIndex}))
-      dispatch(nextQuestion({selectedAnswerIndex}))
+
+      dispatch(addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }));
+      dispatch(nextQuestion({ selectedAnswerIndex }));
       setSelectedAnswerIndex(null);
-   }
+   };
 
    return (
       <form className={styles.controls}>
@@ -43,7 +51,10 @@ const AnswerList = (props) => {
                />
             ))}
          </div>
-         <NextQuestionBtn onNextQuestionClick={onNextQuestionClick}/>
+         <NextQuestionBtn
+            onNextQuestionClick={onNextQuestionClick}
+            selectedAnswerIndex={selectedAnswerIndex}
+         />
       </form>
    );
 };

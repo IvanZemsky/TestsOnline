@@ -4,12 +4,14 @@ import RightArrow from "../icons/RightArrow";
 
 const AQUA = "#BBD6FF";
 
-const NextQuestionBtn = ({onNextQuestionClick}) => {
+const NextQuestionBtn = ({onNextQuestionClick, selectedAnswerIndex}) => {
+   const isAnswerSelected = !selectedAnswerIndex;
    return (
       <button
-         type="submit"
+         type="button"
          className={styles.nextQuestionBtn}
          onClick={onNextQuestionClick}
+         disabled={isAnswerSelected}
       >
          <RightArrow fill={AQUA} />
       </button>

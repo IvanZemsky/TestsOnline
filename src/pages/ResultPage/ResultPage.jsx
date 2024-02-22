@@ -3,18 +3,23 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./ResultPage.module.css";
 import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
+import tests from "../../tests";
 
 const ResultPage = () => {
    const { id } = useParams();
 
-   const test = useSelector((state) => state.test.currentTest);
-   const resultCounter = useSelector(
-      (state) => state.test.currentResultCounter
-   );
-   const results = useSelector((state) => state.test.results).find(
+   const test = tests.find((test) => test.id === +id); // переписать на запросы
+
+   const testResults = useSelector((state) => state.results.results).find(
       (result) => result.testId === +id
-   ).results;
-   console.log(results);
+   );
+   console.log(testResults)
+
+   console.log(testResults);
+
+   if (!test) return <p>Ошибка!</p>
+
+   const resultCounter = testResults.resultCounter;
 
    return (
       <div className={styles.resultPage}>
@@ -29,11 +34,12 @@ const ResultPage = () => {
                   <ResultQuestion
                      key={i}
                      question={question}
-                     results={results}
+                     results={testResults.results}
                      index={i}
                   />
                ))}
             </section>
+            
          </div>
       </div>
    );

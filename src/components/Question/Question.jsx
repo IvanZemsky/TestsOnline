@@ -1,14 +1,10 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { nextStep } from "../../store/slices/testSlice";
 import AnswerList from "../AnswerList/AnswerList";
 import styles from "./Question.module.css";
-import { useNavigate } from "react-router-dom";
 import QuestionTitle from "../UI/QuestionTitle/QuestionTitle";
 
 const Question = ({test}) => {
-   const dispatch = useDispatch();
-   const navigate = useNavigate();
 
    const currentQuestionIndex = useSelector(
       (state) => state.test.currentQuestionIndex

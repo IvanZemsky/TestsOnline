@@ -6,7 +6,7 @@ import tests from "../../tests";
 import { useDispatch, useSelector } from "react-redux";
 import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
 import {
-   clearCurrentTestData,
+   clearCurrentTestState,
    setCurrentTest,
 } from "../../store/slices/testSlice";
 
@@ -23,7 +23,7 @@ const TestPage = () => {
    const test = useMemo(() => tests.find((test) => test.id === id), [id]); // переписать на запросы
 
    useEffect(() => {
-      dispatch(clearCurrentTestData());
+      dispatch(clearCurrentTestState())
       dispatch(setCurrentTest(test));
    }, []);
 

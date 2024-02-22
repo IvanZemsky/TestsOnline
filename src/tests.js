@@ -1,9 +1,16 @@
 import coverImg1 from "./assets/img/test-1.jpg";
+import coverImg2 from "./assets/img/test-2.jpg";
+import coverImg3 from "./assets/img/test-3.jpg";
+import coverImg4 from "./assets/img/test-4.jpg";
+import coverImg5 from "./assets/img/test-2.jpg";
+import coverImg6 from "./assets/img/test-1.jpg";
+import coverImg7 from "./assets/img/test-7.jpg";
+
 
 const tests = [
    {
       id: 1,
-      name: "Тест по frontend-разработке",
+      name: "Frontend-разработка",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       cover: coverImg1,
       questions: [
@@ -35,9 +42,9 @@ const tests = [
    },
    {
       id: 2,
-      name: "Тест по математике",
+      name: "Математика",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-      cover: coverImg1,
+      cover: coverImg2,
       questions: [
          {
             title: "Какой объем у прямоугольного параллелепипеда с длиной 5 см, шириной 3 см и высотой 4 см?",
@@ -97,9 +104,9 @@ const tests = [
    },
    {
       id: 3,
-      name: "Тест по backend-разработке",
+      name: "Backend-разработка",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      cover: coverImg1,
+      cover: coverImg3,
       questions: [
          {
             title: "Что такое RESTful API?",
@@ -187,9 +194,9 @@ const tests = [
    },
    {
       id: 4,
-      name: "Тест по объектно-ориентированному программированию (ООП)",
+      name: "Объектно-ориентированное программирование (ООП)",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Quisque et orci vel elit iaculis fermentum vel vel nulla. Vivamus ut nisl nec lectus.",
-      cover: coverImg1,
+      cover: coverImg4,
       questions: [
          {
             title: "Что такое класс в программировании?",
@@ -285,9 +292,9 @@ const tests = [
    },
    {
       id: 5,
-      name: "Тест по основам программирования",
+      name: "Основы программирования",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod nunc et justo ultricies, id ultricies velit scelerisque. Aliquam id varius lacus. Ut commodo sem ac eros laoreet, ut ultrices purus scelerisque.",
-      cover: coverImg1,
+      cover: coverImg5,
       questions: [
          {
             title: "Что такое переменная в программировании?",
@@ -383,9 +390,9 @@ const tests = [
    },
    {
       id: 6,
-      name: "Тест по HTML",
+      name: "HTML",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt cursus ligula, vitae luctus ex malesuada ac. Fusce vitae elit vel lectus bibendum feugiat. Nullam euismod fringilla augue, non efficitur ex vulputate nec.",
-      cover: coverImg1,
+      cover: coverImg6,
       questions: [
          {
             title: "Что обозначает тег <html> в HTML?",
@@ -458,9 +465,9 @@ const tests = [
    },
    {
       id: 7,
-      name: "Тест по CSS",
+      name: "CSS",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et finibus quam. Sed nec enim vel mi tincidunt vestibulum sit amet a odio. Integer non odio id urna cursus lacinia eu ac dui.",
-      cover: coverImg1,
+      cover: coverImg7,
       questions: [
          {
             title: "Как задать цвет текста в CSS?",

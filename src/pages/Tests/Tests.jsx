@@ -1,6 +1,5 @@
 import React from "react";
 import tests from "../../tests";
-import { Link } from "react-router-dom";
 import TestCard from "../../components/UI/TestCard/TestCard";
 import style from "./Tests.module.css";
 
@@ -9,9 +8,7 @@ const Tests = () => {
       <div className="tests">
          <div className={[style.testsContent, "wrapper"].join(" ")}>
             {tests.map((test) => (
-               <Link to={`/test/${test.id}`} key={test.id}>
-                  <TestCard test={test} />
-               </Link>
+               <TestCard key={test.id} test={test} />
             ))}
          </div>
       </div>
