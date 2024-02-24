@@ -13,21 +13,20 @@ const ResultPage = () => {
    const testResults = useSelector((state) => state.results.results).find(
       (result) => result.testId === +id
    );
-   console.log(testResults)
 
-   console.log(testResults);
-
-   if (!test) return <p>Ошибка!</p>
+   if (!testResults) return <p>Ошибка!</p>; // !!! Обработать
 
    const resultCounter = testResults.resultCounter;
 
    return (
       <div className={styles.resultPage}>
-         <div className={[styles.cotent, "wrapper"].join(" ")}>
-            <h1 className={styles.testName}>{test.name}</h1>
-            <p className={styles.resultCounter}>
-               Результат: {resultCounter} / {test.questions.length}
-            </p>
+         <div className={[styles.content, "wrapper"].join(" ")}>
+            <header className={styles.resultHeader}>
+               <h1 className={styles.testName}>{test.name}</h1>
+               <p className={styles.resultCounter}>
+                  Результат: {resultCounter} / {test.questions.length}
+               </p>
+            </header>
 
             <section className={styles.questions}>
                {test.questions.map((question, i) => (
@@ -39,7 +38,6 @@ const ResultPage = () => {
                   />
                ))}
             </section>
-            
          </div>
       </div>
    );

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-const RightArrow = memo(({fill}) => {
+const RightArrowIcon = memo(({fill}) => {
    return (
       <svg
          viewBox="0 0 42 74"
@@ -14,4 +14,4 @@ const RightArrow = memo(({fill}) => {
    );
 });
 
-export default RightArrow;
+export default RightArrowIcon;

@@ -34,8 +34,12 @@ const testSlice = createSlice({
             correctAnswerIndex,
          });
 
-         console.info(current(state.currentResult)); // ***
+         console.info('cr', current(state.currentResult)); // ***
       },
+
+      // endCurrentTestResult(state, action) { // for resultSLice
+      //    console.log(current(state.currentResult))
+      // },
 
       clearCurrentTestState: () => initialState,
 
@@ -48,5 +52,6 @@ export const {
    setCurrentTest,
    nextQuestion,
    addToCurrentResult,
+   endCurrentTestResult,
    clearCurrentTestState
 } = testSlice.actions;

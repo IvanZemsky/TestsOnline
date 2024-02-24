@@ -20,13 +20,21 @@ const AnswerList = (props) => {
    const navigate = useNavigate();
 
    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-   const testsState = useSelector((state) => state.test);
+   const currentTest = useSelector((state) => state.test.currentTest);
+   const currentResult = useSelector((state) => state.test.currentResult);
+   const currentResultCounter = useSelector((state) => state.test.currentResultCounter);
+
+   const testsState = {
+      currentTest,
+      currentResult,
+      currentResultCounter
+   }
 
    const onNextQuestionClick = (event) => {
 
       if (currentQuestionIndex >= questionAmount - 1) {
          dispatch(
-            addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex })
+            addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }),
          );
          dispatch(addToResults(testsState));
          navigate(`/test/${testId}/result`); // currentTestResult будет очищен
