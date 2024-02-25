@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import styles from "./ResultPage.module.css";
 import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
 import tests from "../../tests";
+import ResultsError from "../../components/ResultsError/ResultsError";
 
 const ResultPage = () => {
    const { id } = useParams();
@@ -14,7 +15,7 @@ const ResultPage = () => {
       (result) => result.testId === +id
    );
 
-   if (!testResults) return <p>Ошибка!</p>; // !!! Обработать
+   if (!testResults) return <ResultsError testId={id}/>;
 
    const resultCounter = testResults.resultCounter;
 

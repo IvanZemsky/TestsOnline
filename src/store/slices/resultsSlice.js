@@ -4,7 +4,7 @@ import { addToCurrentResult, endCurrentTestResult } from "./testSlice";
 const resultSlice = createSlice({
    name: "results",
    initialState: {
-      results: [], // {testId, {questionIndex, selectedAnswerIndex, correctAnswerIndex}[]}
+      results: [], // {testId, resultCounter, {questionIndex, selectedAnswerIndex, correctAnswerIndex}[]}
    },
    reducers: {
       addToResults(state, action) {

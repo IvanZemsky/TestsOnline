@@ -1,7 +1,7 @@
 .testCardBorder {
    padding: 3px 3px 15px 3px;
    border-radius: 25px;
-   background-image: linear-gradient(45deg, #6bb8ff, #d18cffde);
+   background-image: var(--gradient);
    overflow: hidden;
 }
 
@@ -15,10 +15,6 @@
    background-color: #fff;
    overflow: hidden;
 }
-
-/* .testCard:hover {
-   transform: scale(1.05);
-} */
 
 .imgWrap {
    aspect-ratio: 2 / 1.5;
@@ -65,7 +61,7 @@
    border-radius: 15px;
    font-size: 19px;
    padding: 10px;
-   background-image: linear-gradient(45deg, #6bb8ff, #d18cffde);
+   background-image: var(--gradient);
    color: #fff;
    font-weight: 500;
    transition: all 0.2s linear;

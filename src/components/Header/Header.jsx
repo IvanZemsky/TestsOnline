@@ -7,10 +7,12 @@ const Header = () => {
    return (
       <header className={styles.header}>
          <div className={[styles.content, 'wrapper'].join(' ')}>
-            <a href="#" className={styles.logo}>
-               QuestsWebSite
-            </a>
-            <Link to="/">Тесты</Link>
+            <Link to="/" className={styles.logo}>
+               TestsOnline
+            </Link>
+            <Link to="/tests" className={styles.link}>
+               <span>Тесты</span>
+            </Link>
          </div>
       </header>
    );

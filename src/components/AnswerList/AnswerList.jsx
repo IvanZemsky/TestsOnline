@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Answer from "../Answer/Answer";
 import styles from "./AnswerList.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,14 +30,13 @@ const AnswerList = (props) => {
       currentResultCounter
    }
 
-   const onNextQuestionClick = (event) => {
-
+   const onNextQuestionClick = () => {
       if (currentQuestionIndex >= questionAmount - 1) {
          dispatch(
             addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }),
          );
          dispatch(addToResults(testsState));
-         navigate(`/test/${testId}/result`); // currentTestResult будет очищен
+         navigate(`/tests/${testId}/result`); // currentTestResult будет очищен
          return;
       }
 

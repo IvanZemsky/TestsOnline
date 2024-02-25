@@ -1,4 +1,5 @@
 :root{
+   --white: #fff;
    --blue: #475AFF;
    --light-blue: #B1E3FF;
    --sky-blue: #58AFFF;
@@ -8,4 +9,7 @@
    --aqua: #BBD6FF;
    --red: #ff5454;
    --green: #39c539;
+   --gradient-light-blue: #6bb8ff;
+   --gradient-purple: #d18cffde;
+   --gradient: linear-gradient(45deg, #6bb8ff, #d18cffde);
 }

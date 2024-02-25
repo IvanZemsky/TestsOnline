@@ -22,7 +22,7 @@ const TestCard = ({ test }) => {
 
             <Link
                className={styles.startBtn}
-               to={`/test/${id}`}
+               to={`/tests/${id}`}
             >
                Начать
             </Link>

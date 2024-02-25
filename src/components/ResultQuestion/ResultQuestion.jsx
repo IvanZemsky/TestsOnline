@@ -7,17 +7,9 @@ const ResultQuestion = ({ question, results, index }) => {
       question.answers[results[index]?.selectedAnswerIndex] ===
       question.answers[results[index]?.correctAnswerIndex];
 
-   // const questionCSS = [
-   //    styles.question,
-   //    isAnswerCorrect ? styles.falseAnswer : styles.correctAnswer
-   // ].join(" ")
-
-   // const questionNumberCSS = [
-   //    styles.questionNumber,
-   //    isAnswerCorrect ? styles.falseAnswer : styles.correctAnswer
-   // ].join(" ")
-
-   const answerStatusStyle = isAnswerCorrect ? styles.correctAnswer : styles.falseAnswer;
+   const answerStatusStyle = isAnswerCorrect
+      ? styles.correctAnswer
+      : styles.falseAnswer;
 
    return (
       <div className={[styles.question, answerStatusStyle].join(" ")}>
@@ -29,13 +21,19 @@ const ResultQuestion = ({ question, results, index }) => {
          </header>
 
          <div className={styles.answerWrap}>
+            {/* answerWrap - если не нужен, убрать*/}
             {/* {isAnswerCorrect ? correctAnswerIcon : falseAnswerIcon} */}
-
             <p className={styles.userAnswer}>
                Ваш ответ:{" "}
                {question.answers[results[index]?.selectedAnswerIndex]}
             </p>
          </div>
+         {!isAnswerCorrect && (
+            <p>
+               Правильный ответ:{" "}
+               {question.answers[results[index]?.correctAnswerIndex]}
+            </p>
+         )}
       </div>
    );
 };

@@ -1,10 +1,42 @@
 .header{
-   padding: 15px 0;
-   background-color: var(--sky-blue);
+   padding: 12px 0;
+   /* background-color: var(--sky-blue); */
+   border-bottom: 5px solid;
+   border-image: var(--gradient) 1;
 }
 
-.header a {
-   color: #fff;
+.logo{
+   display: block;
+   padding: 10px 15px;
+   border-radius: 15px;
+   background-image: var(--gradient);
+   color: var(--white)
+}
+
+.logo:hover{
+   background-image: linear-gradient(45deg, var(--gradient-purple), var(--gradient-light-blue))
+}
+
+.link {
+   padding: 2px;
+   border-radius: 12px;
+   background-image: var(--gradient); 
+}
+
+.link span{
+   display: block;
+   border-radius: 10.5px;
+   padding: 8px;
+   background-color: var(--white);
+   color: var(--sky-blue);
+   font-weight: 500;
+   font-size: 19px;
+   transition: 0.2s all linear;
+}
+
+.link:hover span{
+   background-color: rgba(0,0,0,0);
+   color: var(--white);
 }
 
 .content{
