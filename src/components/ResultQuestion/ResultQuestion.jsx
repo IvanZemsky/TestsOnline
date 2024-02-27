@@ -12,7 +12,7 @@ const ResultQuestion = ({ question, results, index }) => {
       : styles.falseAnswer;
 
    return (
-      <div className={[styles.question, answerStatusStyle].join(" ")}>
+      <li className={[styles.question, answerStatusStyle].join(" ")}>
          <header className={styles.questionHeader}>
             <p className={[styles.questionNumber, answerStatusStyle].join(" ")}>
                {index + 1}
@@ -29,12 +29,12 @@ const ResultQuestion = ({ question, results, index }) => {
             </p>
          </div>
          {!isAnswerCorrect && (
-            <p>
-               Правильный ответ:{" "}
+            <p className={styles.rightAnswer}>
+               <span>Правильный ответ:</span>{" "}
                {question.answers[results[index]?.correctAnswerIndex]}
             </p>
          )}
-      </div>
+      </li>
    );
 };
 

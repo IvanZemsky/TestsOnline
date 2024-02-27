@@ -1,6 +1,5 @@
 .header{
    padding: 12px 0;
-   /* background-color: var(--sky-blue); */
    border-bottom: 5px solid;
    border-image: var(--gradient) 1;
 }

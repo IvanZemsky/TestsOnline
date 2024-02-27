@@ -4,6 +4,11 @@
    border: 3px solid var(--sky-blue);
    border-left: 10px solid var(--sky-blue);
    border-radius: 32px;
+   font-size: 20px;
+}
+
+.question:last-child{
+   margin-bottom: 0;
 }
 
 .questionHeader{
@@ -52,4 +57,8 @@
 
 .userAnswer{
    font-size: 19px;
+}
+
+.rightAnswer span{
+   border-bottom: 1px solid var(--black);
 }

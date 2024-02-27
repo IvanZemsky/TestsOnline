@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./ResultPage.module.css";
@@ -11,9 +11,11 @@ const ResultPage = () => {
 
    const test = tests.find((test) => test.id === +id); // переписать на запросы
 
-   const testResults = useSelector((state) => state.results.results).find(
+   const testResults = useSelector((state) => state.test.results).find(
       (result) => result.testId === +id
    );
+
+   console.log(testResults)
 
    if (!testResults) return <ResultsError testId={id}/>;
 
@@ -29,7 +31,7 @@ const ResultPage = () => {
                </p>
             </header>
 
-            <section className={styles.questions}>
+            <ul className={styles.questions}>
                {test.questions.map((question, i) => (
                   <ResultQuestion
                      key={i}
@@ -38,7 +40,7 @@ const ResultPage = () => {
                      index={i}
                   />
                ))}
-            </section>
+            </ul>
          </div>
       </div>
    );

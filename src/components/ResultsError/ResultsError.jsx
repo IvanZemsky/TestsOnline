@@ -1,23 +1,21 @@
-import React from 'react'
-import styles from './ResultsError.module.css'
-import { Link } from "react-router-dom"
+import React from "react";
+import styles from "./ResultsError.module.css";
+import { Link } from "react-router-dom";
 
-const ResultsError = ({testId}) => {
-  return (
-    <div className={styles.resultsError}>
-      <div className={[styles.resultsContent, 'wrapper'].join("")}>
-         <h1>Вы ещё не прошли этот тест</h1>
+const ResultsError = ({ testId }) => {
+   return (
+      <div className={[styles.content, "wrapper"].join(" ")}>
+         <h1 className={styles.title}>Вы ещё не прошли этот тест</h1>
          <div className={styles.links}>
-            <Link to={`/tests/${testId}`}>
+            <Link to={`/tests/${testId}`} className={styles.link}>
                Перейти к тесту
             </Link>
-            <Link to="/tests">
+            <Link to="/tests" className={styles.link}>
                На страницу тестов
             </Link>
          </div>
       </div>
-    </div>
-  )
-}
+   );
+};
 
-export default ResultsError
+export default ResultsError;

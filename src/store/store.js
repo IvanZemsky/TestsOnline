@@ -1,8 +1,9 @@
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import testSlice from "./slices/testSlice";
-import {
+import { 
    persistStore,
    persistReducer,
+   // для ignoredActions:
    FLUSH,
    REHYDRATE,
    PAUSE,
@@ -11,15 +12,13 @@ import {
    REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import resultSlice from "./slices/resultsSlice";
 
 const persistConfig = {
-   key: "results",
+   key: "test",
    storage,
-   whitelist: ['results']
 };
 
-const rootReducer = combineSlices(testSlice, resultSlice);
+const rootReducer = combineSlices(testSlice);
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Answer from "../Answer/Answer";
 import styles from "./AnswerList.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { nextQuestion, addToCurrentResult } from "../../store/slices/testSlice";
-import { addToResults } from "../../store/slices/resultsSlice";
+import { useDispatch } from "react-redux";
+import { nextQuestion, addToCurrentResult, addToResults } from "../../store/slices/testSlice";
 import { useNavigate } from "react-router-dom";
 import NextQuestionBtn from "../UI/NextQuestionBtn/NextQuestionBtn";
 
@@ -20,23 +19,12 @@ const AnswerList = (props) => {
    const navigate = useNavigate();
 
    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-   const currentTest = useSelector((state) => state.test.currentTest);
-   const currentResult = useSelector((state) => state.test.currentResult);
-   const currentResultCounter = useSelector((state) => state.test.currentResultCounter);
-
-   const testsState = {
-      currentTest,
-      currentResult,
-      currentResultCounter
-   }
 
    const onNextQuestionClick = () => {
       if (currentQuestionIndex >= questionAmount - 1) {
-         dispatch(
-            addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }),
-         );
-         dispatch(addToResults(testsState));
-         navigate(`/tests/${testId}/result`); // currentTestResult будет очищен
+         dispatch(addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }));
+         dispatch(addToResults());
+         navigate(`result`); // currentTestResult будет очищен
          return;
       }
 

@@ -30,6 +30,7 @@
    pointer-events: none;
    transition: all 0.15s linear;
    filter: brightness(0.8);
+   user-select: none;
    overflow: hidden;
 }
 

@@ -1,4 +1,6 @@
 :root{
+   --default-black: #000;
+   --black: #3a3a3a;
    --white: #fff;
    --blue: #475AFF;
    --light-blue: #B1E3FF;

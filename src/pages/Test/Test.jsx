@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./TestPage.module.css";
+import styles from "./Test.module.css";
 import Question from "../../components/Question/Question";
 import tests from "../../tests";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,21 +11,23 @@ import {
 } from "../../store/slices/testSlice";
 
 const TestPage = () => {
-   const dispatch = useDispatch();
-
    let { id } = useParams();
    id = +id;
-
-   const currentQuestionIndex = useSelector(
-      (state) => state.test.currentQuestionIndex
-   );
-
-   const test = useMemo(() => tests.find((test) => test.id === id), [id]); // переписать на запросы
 
    useEffect(() => {
       dispatch(clearCurrentTestState())
       dispatch(setCurrentTest(test));
    }, []);
+
+   const dispatch = useDispatch();
+
+   const currentQuestionIndex = useSelector(
+      (state) => state.test.currentQuestionIndex
+   );
+
+   const test = useMemo(() => tests.find((test) => test.id === id), [id]);
+
+   if (!test) return <p>Ошибка!</p> // обработать
 
    return (
       <div className={styles.testPage}>

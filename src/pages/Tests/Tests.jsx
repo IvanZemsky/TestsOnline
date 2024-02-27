@@ -4,6 +4,13 @@ import TestCard from "../../components/UI/TestCard/TestCard";
 import style from "./Tests.module.css";
 
 const Tests = () => {
+
+   // state for tests
+
+   // getting from useEffect
+
+   // loader
+
    return (
       <div className="tests">
          <div className={[style.testsContent, "wrapper"].join(" ")}>

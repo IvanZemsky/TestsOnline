@@ -5,6 +5,7 @@ const initialState = {
    currentQuestionIndex: 0,
    currentResult: [], // {questionIndex, selectedAnswerIndex, correctAnswerIndex}
    currentResultCounter: 0,
+   results: [], // {testId, resultCounter, {questionIndex, selectedAnswerIndex, correctAnswerIndex}[]}
 }
 
 const testSlice = createSlice({
@@ -37,11 +38,27 @@ const testSlice = createSlice({
          console.info('cr', current(state.currentResult)); // ***
       },
 
-      // endCurrentTestResult(state, action) { // for resultSLice
-      //    console.log(current(state.currentResult))
-      // },
+      addToResults(state) {
+         const resultIndex = state.results.findIndex(
+            (result) => result.testId === state.currentTest.id
+         );
+         const result = {
+            testId: state.currentTest.id,
+            resultCounter: state.currentResultCounter,
+            results: state.currentResult,
+         };
 
-      clearCurrentTestState: () => initialState,
+         if (resultIndex === -1) {
+            state.results.push(result);
+         } else {
+            state.results[resultIndex] = result;
+         }
+         console.info(current(state.results)); // ***
+      },
+
+      clearCurrentTestState: (state) => {
+         return {...initialState, results: state.results}
+      },
 
    },
 });
@@ -52,6 +69,6 @@ export const {
    setCurrentTest,
    nextQuestion,
    addToCurrentResult,
-   endCurrentTestResult,
+   addToResults,
    clearCurrentTestState
 } = testSlice.actions;

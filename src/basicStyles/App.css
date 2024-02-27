@@ -3,11 +3,12 @@ body {
    font-family: 'Montserrat';
    font-weight: 400;
    font-style: normal;
+   color: var(--default-black)
 }
 
 .app{
    display: grid;
    grid-template-rows: auto 1fr;
    grid-template-columns: 100%;
-   height: 100vh;
+   min-height: 100vh;
 }
