@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Intro.module.css'
+import styles from "./Intro.module.css";
 import { Link } from "react-router-dom";
 
 const Intro = () => {
@@ -7,7 +7,7 @@ const Intro = () => {
       <section className={styles.intro}>
          <h1 className={styles.title}>
             <p>Добро пожаловать в TestsOnline:</p>
-            <p>Пройдите тесты по разным дисциплинам!</p>
+            <p>Проверьте свои знания в разных дисциплинах!</p>
          </h1>
          <hr className={styles.line} />
          <p className={styles.info}>
@@ -15,9 +15,9 @@ const Intro = () => {
             проверки своих знаний. Здесь вы можете найти тесты по математике,
             программированию, истории, изобразительному искусству, etc.
          </p>
-         <div className={styles.links}>
-            <Link to="tests">Попробуйте!</Link>
-         </div>
+         <Link className={styles.link} to="tests">
+            Попробуйте!
+         </Link>
       </section>
    );
 };

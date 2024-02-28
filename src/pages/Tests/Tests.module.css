@@ -1,9 +1,11 @@
 .testsContent{
+   padding-top: 25px;
+   padding-bottom: 25px;
+}
+
+.tests{
    display: grid;
    grid-template-rows: auto;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    gap: 30px;
-   width: 100%;
-   padding-top: 25px;
-   padding-bottom: 25px;
 }

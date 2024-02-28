@@ -7,6 +7,10 @@
    font-size: 20px;
 }
 
+.question:hover{
+   background-color: #eaeaea;
+}
+
 .question:last-child{
    margin-bottom: 0;
 }

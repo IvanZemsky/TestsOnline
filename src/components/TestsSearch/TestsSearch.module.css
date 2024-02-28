@@ -1,0 +1,14 @@
+.testsSearch{
+   width: 100%;
+   max-width: 450px;
+   margin-bottom: 25px;
+   padding: 10px 15px;
+   border: 2px solid var(--sky-blue);
+   border-radius: 25px;
+   color: var(--default-black);
+   font-size: 17px;
+}
+
+.testsSearch::placeholder{
+   color: #c0c0c0;
+}
