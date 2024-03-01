@@ -1,5 +1,6 @@
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import testSlice from "./slices/testSlice";
+import themeSlice from "./slices/themeSlice";
 import { 
    persistStore,
    persistReducer,
@@ -16,9 +17,10 @@ import storage from "redux-persist/lib/storage";
 const persistConfig = {
    key: "test",
    storage,
+   whitelist: ['test']
 };
 
-const rootReducer = combineSlices(testSlice);
+const rootReducer = combineSlices(testSlice, themeSlice);
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

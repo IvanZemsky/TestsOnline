@@ -6,12 +6,12 @@ import coverImg5 from "./assets/img/test-2.jpg";
 import coverImg6 from "./assets/img/test-1.jpg";
 import coverImg7 from "./assets/img/test-7.jpg";
 
-
 const tests = [
    {
       id: 1,
       name: "Frontend-разработка",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      category: "Программирование",
       cover: coverImg1,
       questions: [
          {
@@ -44,6 +44,7 @@ const tests = [
       id: 2,
       name: "Математика",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      category: "Математика",
       cover: coverImg2,
       questions: [
          {
@@ -106,6 +107,7 @@ const tests = [
       id: 3,
       name: "Backend-разработка",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      category: "Программирование",
       cover: coverImg3,
       questions: [
          {
@@ -196,6 +198,7 @@ const tests = [
       id: 4,
       name: "Объектно-ориентированное программирование (ООП)",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Quisque et orci vel elit iaculis fermentum vel vel nulla. Vivamus ut nisl nec lectus.",
+      category: "Программирование",
       cover: coverImg4,
       questions: [
          {
@@ -294,6 +297,7 @@ const tests = [
       id: 5,
       name: "Основы программирования",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod nunc et justo ultricies, id ultricies velit scelerisque. Aliquam id varius lacus. Ut commodo sem ac eros laoreet, ut ultrices purus scelerisque.",
+      category: "Программирование",
       cover: coverImg5,
       questions: [
          {
@@ -392,6 +396,7 @@ const tests = [
       id: 6,
       name: "HTML",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt cursus ligula, vitae luctus ex malesuada ac. Fusce vitae elit vel lectus bibendum feugiat. Nullam euismod fringilla augue, non efficitur ex vulputate nec.",
+      category: "Программирование",
       cover: coverImg6,
       questions: [
          {
@@ -467,6 +472,7 @@ const tests = [
       id: 7,
       name: "CSS",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et finibus quam. Sed nec enim vel mi tincidunt vestibulum sit amet a odio. Integer non odio id urna cursus lacinia eu ac dui.",
+      category: "Программирование",
       cover: coverImg7,
       questions: [
          {
@@ -534,6 +540,157 @@ const tests = [
          {
             title: "Как изменить цвет границы элемента в CSS?",
             answers: ["border-color", "outline-color", "element-border-color"],
+            correctAnswer: 0,
+         },
+      ],
+   },
+   {
+      id: 8,
+      name: "История древнего Рима",
+      desc: "Древний Рим - одна из величайших цивилизаций древности, оставившая неизгладимый след в мировой истории. От создания Рима, до его величественной империи - вопросы этого теста погрузят вас в увлекательный мир древнеримского общества.",
+      category: "История",
+      cover: coverImg1,
+      questions: [
+         {
+            title: "Кто были Ромул и Рем?",
+            answers: [
+               "Братья-близнецы, основатели Рима",
+               "Римские императоры",
+               "Завоеватели Рима",
+            ],
+            correctAnswer: 0,
+         },
+         {
+            title: "Какая форма правления существовала в Древнем Риме на ранних этапах?",
+            answers: ["Монархия", "Республика", "Империя"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Кто был первым римским императором?",
+            answers: ["Юлий Цезарь", "Август", "Тиберий"],
+            correctAnswer: 1,
+         },
+         {
+            title: "Какие пути расширения Римской империи были наиболее значительными?",
+            answers: ["Восток", "Запад", "Оба направления"],
+            correctAnswer: 2,
+         },
+         {
+            title: "Какие пагубные события произошли в 476 году?",
+            answers: [
+               "Сражение при Гаугамеле",
+               "Падение Рима",
+               "Возникновение Римской империи",
+            ],
+            correctAnswer: 1,
+         },
+         {
+            title: "Кто был известным римским философом и стоиком?",
+            answers: ["Сенека", "Аристотель", "Платон"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Какова роль Карфагена в истории древнего Рима?",
+            answers: [
+               "Главный враг Рима в Пунических войнах",
+               "Древний союзник Рима",
+               "Столица Римской империи",
+            ],
+            correctAnswer: 0,
+         },
+         {
+            title: "Как называется период мира и стабильности в Римской империи?",
+            answers: [
+               "Эпоха Триумвирата",
+               "Пакс Романа",
+               "Время Гражданских войн",
+            ],
+            correctAnswer: 1,
+         },
+         {
+            title: "Кто известен как реформатор Римской армии?",
+            answers: ["Гай Марий", "Сулла", "Юлий Цезарь"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Какая культура оказала влияние на древний Рим?",
+            answers: ["Греческая", "Египетская", "Персидская"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Какой термин обозначает древнеримскую верховную власть?",
+            answers: ["Сенат", "Консул", "Император"],
+            correctAnswer: 2,
+         },
+      ],
+   },
+   {
+      id: 9,
+      name: "Математика. Квадратные уравнения",
+      desc: "Освежите свои знания о квадратных уравнениях! В этом вопросы, проверяющие ваши теоретические знания, а также практические задачи на нахождение корней квадратных уравнений.",
+      category: "Математика",
+      cover: coverImg2,
+      questions: [
+         {
+            title: "Что такое квадратное уравнение?",
+            answers: [
+               "Уравнение второй степени",
+               "Уравнение с двумя переменными",
+               "Уравнение с тремя переменными",
+            ],
+            correctAnswer: 0,
+         },
+         {
+            title: "Какие формулы используются для нахождения корней квадратного уравнения?",
+            answers: [
+               "Формула Виета",
+               "Формула Герона",
+               "Формула корней квадратного уравнения",
+            ],
+            correctAnswer: 2,
+         },
+         {
+            title: "Когда квадратное уравнение имеет два действительных корня?",
+            answers: [
+               "Когда дискриминант положителен",
+               "Когда дискриминант равен нулю",
+               "Когда дискриминант отрицателен",
+            ],
+            correctAnswer: 0,
+         },
+         {
+            title: "Найдите корни уравнения: x² - 4x + 4 = 0",
+            answers: ["x = 2", "x = 4", "x = 1"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Решите уравнение: 2x² + 3x - 5 = 0",
+            answers: ["x = 1, x = -2.5", "x = 5, x = -1", "x = 2.5, x = -1"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Найдите корни уравнения: x² - 6x + 9 = 0",
+            answers: ["x = 3", "x = -3", "x = 2"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Решите уравнение: 4x² - 16 = 0",
+            answers: ["x = 2, x = -2", "x = 4, x = -4", "x = 3, x = -3"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Найдите корни уравнения: 3x² + 5x + 2 = 0",
+            answers: ["x = -1, x = -2/3", "x = 2, x = -1/3", "x = -2, x = 1/3"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Решите уравнение: x² + 7x + 10 = 0",
+            answers: ["x = -2, x = -5", "x = -3, x = -10", "x = 2, x = 5"],
+            correctAnswer: 0,
+         },
+         {
+            title: "Найдите корни уравнения: 2x² - x - 1 = 0",
+            answers: ["x = 1, x = -0.5", "x = 2, x = -1", "x = -1, x = 0.5"],
             correctAnswer: 0,
          },
       ],

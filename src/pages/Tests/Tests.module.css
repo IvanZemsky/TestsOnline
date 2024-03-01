@@ -1,11 +1,43 @@
+.testCards{
+   display: grid;
+   grid-template-rows: auto;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+}
+
 .testsContent{
    padding-top: 25px;
    padding-bottom: 25px;
 }
 
-.tests{
-   display: grid;
-   grid-template-rows: auto;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-   gap: 30px;
+.panel{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 25px;
+   margin-bottom: 25px;
+}
+
+.categories{
+   display: flex;
+   align-items: center;
+   gap: 22px;
+}
+
+.category{
+   padding: 10px 15px;
+   border-radius: 20px;
+   border: 2px solid var(--sky-blue);
+   font-size: 17px;
+   font-weight: 500;
+   transition: 0.2s all linear;
+}
+
+.current{
+   background-color: var(--sky-blue);
+   color: var(--white);
+}
+
+.tests.dark{
+   background-color: #303030;
 }
