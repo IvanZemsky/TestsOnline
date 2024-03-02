@@ -5,9 +5,11 @@ import styles from "./Tests.module.css";
 import TestsSearch from "../../components/TestsSearch/TestsSearch";
 import EmptyTests from "../../components/EmptyTests/EmptyTests";
 import { useSelector } from "react-redux";
+import CategoryList from "../../components/CategoryList/CategoryList";
 
 const Tests = () => {
    const [filterInputValue, setFilterInputValue] = useState("");
+   const [category, setCategory] = useState("");
    const theme = useSelector((state) => state.theme.theme);
    console.log(theme);
 
@@ -34,17 +36,7 @@ const Tests = () => {
                   filterInputValue={filterInputValue}
                   setFilterInputValue={setFilterInputValue}
                />
-               <div className={styles.categories}>
-                  <button
-                     className={[styles.category, styles.current].join(" ")}
-                  >
-                     Все
-                  </button>
-                  <button className={styles.category}>Программирование</button>
-                  <button className={styles.category}>Математика</button>
-                  <button className={styles.category}>Языки</button>
-                  <button className={styles.category}>История</button>
-               </div>
+               <CategoryList />
             </div>
 
             <div className={styles.testCards}>

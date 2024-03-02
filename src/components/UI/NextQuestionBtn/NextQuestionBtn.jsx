@@ -2,7 +2,7 @@ import React from "react";
 import styles from './NextQuestionBtn.module.css'
 import RightArrowIcon from "../icons/RightArrowIcon";
 
-const AQUA = "#BBD6FF";
+const SEA_BLUE = "#84C4FF";
 
 const NextQuestionBtn = ({onNextQuestionClick, selectedAnswerIndex}) => {
    const isAnswerSelected = !selectedAnswerIndex;
@@ -13,7 +13,7 @@ const NextQuestionBtn = ({onNextQuestionClick, selectedAnswerIndex}) => {
          onClick={onNextQuestionClick}
          disabled={isAnswerSelected}
       >
-         <RightArrowIcon fill={AQUA} />
+         <RightArrowIcon fill={SEA_BLUE} />
       </button>
    );
 };

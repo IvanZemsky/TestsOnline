@@ -8,7 +8,6 @@ import NextQuestionBtn from "../UI/NextQuestionBtn/NextQuestionBtn";
 
 const AnswerList = (props) => {
    const {
-      testId,
       answers,
       questionAmount,
       currentQuestionIndex,

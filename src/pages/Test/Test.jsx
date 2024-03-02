@@ -11,18 +11,18 @@ const TestPage = () => {
    let { id } = useParams();
    id = +id;
 
-   useEffect(() => {
-      dispatch(clearCurrentTestState())
-      dispatch(setCurrentTest(test));
-   }, []);
-
    const dispatch = useDispatch();
 
    const currentQuestionIndex = useSelector(
       (state) => state.test.currentQuestionIndex
    );
 
-   const test = useMemo(() => tests.find((test) => test.id === id), [id]);
+   const test = tests.find((test) => test.id === id);
+
+   useEffect(() => {
+      dispatch(clearCurrentTestState())
+      dispatch(setCurrentTest(test));
+   }, []);
 
    if (!test) return <p>Ошибка!</p> // обработать
 
