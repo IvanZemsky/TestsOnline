@@ -8,35 +8,43 @@ import { useSelector } from "react-redux";
 import CategoryList from "../../components/CategoryList/CategoryList";
 
 const Tests = () => {
-   const [filterInputValue, setFilterInputValue] = useState("");
-   const [category, setCategory] = useState("");
+   const [category, setCategory] = useState("Все");
+   const [searchInputValue, setSearchInputValue] = useState("");
    const theme = useSelector((state) => state.theme.theme);
-   console.log(theme);
 
    // state for tests
    // getting from useEffect
    // loader
 
-   const filtered = tests.filter(
-      // DEBOUNCE !!!
-      (test) => {
-         const value = filterInputValue.toLowerCase();
-         return (
-            test.name.toLowerCase().includes(value) ||
-            test.desc.toLowerCase().includes(value)
-         );
-      }
-   );
+   const filtered = tests
+      .filter((test) =>
+         category !== "Все" ? test.category === category : test
+      )
+      .filter(
+         // DEBOUNCE !!!
+         (test) => {
+            const value = searchInputValue.toLowerCase();
+            return (
+               test.name.toLowerCase().includes(value) ||
+               test.desc.toLowerCase().includes(value)
+            );
+         }
+      );
+
+   const handleCategoryClick = (category) => {
+      setSearchInputValue("");
+      setCategory(category);
+   };
 
    return (
       <div className={[styles.tests, styles[theme]].join(" ")}>
          <div className={[styles.testsContent, "wrapper"].join(" ")}>
             <div className={styles.panel}>
                <TestsSearch
-                  filterInputValue={filterInputValue}
-                  setFilterInputValue={setFilterInputValue}
+                  searchInputValue={searchInputValue}
+                  setSearchInputValue={setSearchInputValue}
                />
-               <CategoryList />
+               <CategoryList handleCategoryClick={handleCategoryClick} />
             </div>
 
             <div className={styles.testCards}>

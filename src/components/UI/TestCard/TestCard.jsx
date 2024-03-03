@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./TestCard.module.css";
 import { Link } from "react-router-dom";
 
-const TestCard = ({ test }) => {
+const TestCard = memo(({ test }) => {
    const { id, name, desc, cover } = test;
 
    return (
@@ -29,6 +29,6 @@ const TestCard = ({ test }) => {
          </div>
       </div>
    );
-};
+});
 
 export default TestCard;

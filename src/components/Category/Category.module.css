@@ -7,6 +7,7 @@
    font-weight: 500;
    transition: 0.2s all linear;
    cursor: pointer;
+   user-select: none;
 }
 
 .categoryText:hover{

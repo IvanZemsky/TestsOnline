@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./TestsSearch.module.css";
 
-const TestsSearch = ({ filterInputValue, setFilterInputValue }) => {
+const TestsSearch = ({ searchInputValue, setSearchInputValue }) => {
    return (
       <input
          type="text"
          className={styles.testsSearch}
          placeholder="Поиск"
          onChange={(event) =>
-            setFilterInputValue(event.target.value)
+            setSearchInputValue(event.target.value)
          }
-         value={filterInputValue}
+         value={searchInputValue}
       />
    );
 };
