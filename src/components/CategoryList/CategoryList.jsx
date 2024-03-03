@@ -10,7 +10,7 @@ const CategoryList = ({ handleCategoryClick }) => {
          <Category
             category="Все"
             handleCategoryClick={handleCategoryClick}
-            defaultChecked={true}
+            
          />
 
          {categories.map((category) => (

@@ -39,7 +39,7 @@ const AnswerList = (props) => {
                <Answer
                   key={answer + i + currentQuestionIndex}
                   answer={answer}
-                  id={"answer" + i + currentQuestionIndex}
+                  id={i + currentQuestionIndex}
                   value={i}
                   setSelectedAnswerIndex={setSelectedAnswerIndex}
                />

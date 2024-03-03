@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tests from "../../tests";
 import TestCard from "../../components/UI/TestCard/TestCard";
 import styles from "./Tests.module.css";
@@ -11,6 +11,14 @@ const Tests = () => {
    const [category, setCategory] = useState("Все");
    const [searchInputValue, setSearchInputValue] = useState("");
    const theme = useSelector((state) => state.theme.theme);
+
+   useEffect(() => {
+      setCategory(localStorage.getItem('category'));
+   }, [])
+
+   useEffect(() => {
+      localStorage.setItem('category', category);
+   }, [category])
 
    // state for tests
    // getting from useEffect

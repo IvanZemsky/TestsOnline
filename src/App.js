@@ -6,8 +6,8 @@ import './basicStyles/wrapper.css'
 import './basicStyles/_vars.css'
 import { Route, Routes } from "react-router-dom";
 import Tests from "./pages/Tests/Tests";
-import TestPage from "./pages/Test/Test";
-import ResultPage from './pages/ResultPage/ResultPage'
+import Test from "./pages/Test/Test";
+import Result from './pages/Result/Result'
 import Landing from "./pages/Landing/Landing";
 
 const App = () => {
@@ -17,8 +17,8 @@ const App = () => {
          <Routes>
             <Route index element={<Landing/>}/>
             <Route path="/tests" element={<Tests />} />
-            <Route path="/tests/:id" element={<TestPage />} />
-            <Route path="/tests/:id/result" element={<ResultPage />} />
+            <Route path="/tests/:id" element={<Test />} />
+            <Route path="/tests/:id/result" element={<Result />} />
          </Routes>
       </div>
    );

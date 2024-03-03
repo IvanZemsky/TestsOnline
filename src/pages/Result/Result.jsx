@@ -6,16 +6,14 @@ import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
 import tests from "../../tests";
 import ResultsError from "../../components/ResultsError/ResultsError";
 
-const ResultPage = () => {
+const Result = () => {
    const { id } = useParams();
-
-   const test = tests.find((test) => test.id === +id); // переписать на запросы
 
    const testResults = useSelector((state) => state.test.results).find(
       (result) => result.testId === +id
    );
 
-   console.log(testResults)
+   const test = tests.find((test) => test.id === +id); // переписать на запросы
 
    if (!testResults) return <ResultsError testId={id}/>;
 
@@ -46,4 +44,4 @@ const ResultPage = () => {
    );
 };
 
-export default ResultPage;
+export default Result;

@@ -13,6 +13,7 @@ const tests = [
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       category: "Программирование",
       cover: coverImg1,
+      // https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       questions: [
          {
             title: "Что такое замыкания в JavaScript?",
@@ -46,6 +47,7 @@ const tests = [
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       category: "Математика",
       cover: coverImg2,
+      // https://images.unsplash.com/photo-1635372722656-389f87a941b7?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       questions: [
          {
             title: "Какой объем у прямоугольного параллелепипеда с длиной 5 см, шириной 3 см и высотой 4 см?",
@@ -109,6 +111,7 @@ const tests = [
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       category: "Программирование",
       cover: coverImg3,
+      // https://images.unsplash.com/photo-1561233835-f937539b95b9?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       questions: [
          {
             title: "Что такое RESTful API?",
@@ -200,6 +203,7 @@ const tests = [
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Quisque et orci vel elit iaculis fermentum vel vel nulla. Vivamus ut nisl nec lectus.",
       category: "Программирование",
       cover: coverImg4,
+      // 
       questions: [
          {
             title: "Что такое класс в программировании?",
@@ -474,6 +478,7 @@ const tests = [
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et finibus quam. Sed nec enim vel mi tincidunt vestibulum sit amet a odio. Integer non odio id urna cursus lacinia eu ac dui.",
       category: "Программирование",
       cover: coverImg7,
+      // https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       questions: [
          {
             title: "Как задать цвет текста в CSS?",

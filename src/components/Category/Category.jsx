@@ -1,7 +1,10 @@
 import React, { memo } from "react";
 import styles from "./Category.module.css";
 
-const Category = memo(({category, handleCategoryClick, defaultChecked}) => {
+const Category = memo(({category, handleCategoryClick }) => {
+
+   const isChecked = localStorage.getItem('category') === category ? true : false;
+
    return (
       <div>
          <input
@@ -10,7 +13,7 @@ const Category = memo(({category, handleCategoryClick, defaultChecked}) => {
             id={category}
             name="category"
             value={category}
-            defaultChecked={defaultChecked}
+            defaultChecked={isChecked}
             onChange={() => handleCategoryClick(category)}
          />
          <label
