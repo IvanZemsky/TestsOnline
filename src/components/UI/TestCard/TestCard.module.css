@@ -16,6 +16,10 @@
    overflow: hidden;
 }
 
+:global(.app.dark) .testCard{
+   background-color: #232323;
+}
+
 .imgWrap {
    aspect-ratio: 2 / 1.5;
    border-radius: 10px;

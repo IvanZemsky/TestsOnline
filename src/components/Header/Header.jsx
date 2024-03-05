@@ -1,12 +1,9 @@
-import React, { memo, useEffect } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import {toggleTheme} from '../../store/slices/themeSlice'
+import ThemeBtn from './../UI/ThemeBtn/ThemeBtn';
 
 const Header = () => {
-   const dispatch = useDispatch();
-
    return (
       <header className={styles.header}>
          <div className={[styles.content, "wrapper"].join(" ")}>
@@ -20,7 +17,7 @@ const Header = () => {
                </Link>
             </nav>
 
-            <button onClick={() => dispatch(toggleTheme())}>Тема</button>
+            <ThemeBtn />
          </div>
       </header>
    );

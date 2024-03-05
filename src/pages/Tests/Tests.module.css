@@ -17,10 +17,6 @@
    justify-content: space-between;
    gap: 25px;
    padding: 25px 0;
-   background-color: var(--white);
+   background-color: var(--background);
    z-index: 100;
-}
-
-.tests.dark{
-   background-color: #303030;
 }

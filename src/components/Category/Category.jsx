@@ -1,7 +1,7 @@
-import React, { memo } from "react";
+import React from "react";
 import styles from "./Category.module.css";
 
-const Category = memo(({category, handleCategoryClick }) => {
+const Category = ({category, handleCategoryClick }) => {
 
    const isChecked = localStorage.getItem('category') === category ? true : false;
 
@@ -24,6 +24,6 @@ const Category = memo(({category, handleCategoryClick }) => {
          </label>
       </div>
    );
-});
+};
 
 export default Category;

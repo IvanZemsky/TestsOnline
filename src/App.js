@@ -9,10 +9,13 @@ import Tests from "./pages/Tests/Tests";
 import Test from "./pages/Test/Test";
 import Result from './pages/Result/Result'
 import Landing from "./pages/Landing/Landing";
+import { useSelector } from "react-redux";
 
 const App = () => {
+   const theme = useSelector((state) => state.theme.theme);
+
    return (
-      <div className="app">
+      <div className={`app ${theme}`}>
          <Header />
          <Routes>
             <Route index element={<Landing/>}/>

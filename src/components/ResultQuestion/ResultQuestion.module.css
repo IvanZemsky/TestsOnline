@@ -11,6 +11,10 @@
    background-color: #ededff;
 }
 
+:global(.dark) .question:hover {
+   background-color: #1a1a1a;
+}
+
 .question:last-child{
    margin-bottom: 0;
 }

@@ -9,6 +9,7 @@
 .nextQuestionBtn svg{
    width: 42px;
    height: 74px;
+   fill: var(--sea-blue);
 }
 
 .nextQuestionBtn:hover{

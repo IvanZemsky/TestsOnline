@@ -17,7 +17,7 @@ import storage from "redux-persist/lib/storage";
 const persistConfig = {
    key: "test",
    storage,
-   whitelist: ['test']
+   whitelist: ['test', 'theme']
 };
 
 const rootReducer = combineSlices(testSlice, themeSlice);

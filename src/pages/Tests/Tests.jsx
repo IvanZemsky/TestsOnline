@@ -4,16 +4,15 @@ import TestCard from "../../components/UI/TestCard/TestCard";
 import styles from "./Tests.module.css";
 import TestsSearch from "../../components/TestsSearch/TestsSearch";
 import EmptyTests from "../../components/EmptyTests/EmptyTests";
-import { useSelector } from "react-redux";
 import CategoryList from "../../components/CategoryList/CategoryList";
 
 const Tests = () => {
    const [category, setCategory] = useState("Все");
    const [searchInputValue, setSearchInputValue] = useState("");
-   const theme = useSelector((state) => state.theme.theme);
 
    useEffect(() => {
-      setCategory(localStorage.getItem('category'));
+      const category = localStorage.getItem('category');
+      setCategory(category ? category : 'Все');
    }, [])
 
    useEffect(() => {
@@ -45,7 +44,7 @@ const Tests = () => {
    };
 
    return (
-      <div className={[styles.tests, styles[theme]].join(" ")}>
+      <div className={styles.tests}>
          <div className={[styles.testsContent, "wrapper"].join(" ")}>
             <div className={styles.panel}>
                <TestsSearch

@@ -47,21 +47,3 @@
    background-color: var(--sea-blue);
    color: #fff;
 }
-
-
-
-/* .answer{
-   display: flex;
-   align-items: center;
-   flex: 1 0 auto;
-   width: 100%;
-   padding: 10px 28px;
-   color: #1D1D1D;
-   font-weight: 500;
-   background-color: var(--invisible-blue);
-}
-
-.answerBtn:hover{
-   background-color: var(--sea-blue);
-   color: white;
-} */

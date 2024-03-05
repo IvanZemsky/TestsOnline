@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 
-const RightArrowIcon = memo(({fill}) => {
+const RightArrowIcon = memo(() => {
    return (
       <svg
          viewBox="0 0 42 74"
-         fill={fill}
+         fill="black"
          xmlns="http://www.w3.org/2000/svg"
       >
          <path

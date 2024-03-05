@@ -37,7 +37,7 @@
 .link{
    padding: 15px 20px;
    background-color: var(--white);
-   color: var(--black);
+   color: var(--default-black);
    font-weight: 500;
    border-radius: 5px;
 }

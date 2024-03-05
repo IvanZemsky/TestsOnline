@@ -40,11 +40,15 @@
    display: block;
    border-radius: 10.5px;
    padding: 8px;
-   background-color: var(--white);
+   background-color: var(--background);
    color: var(--sky-blue);
    font-weight: 500;
    font-size: 19px;
    transition: 0.2s all linear;
+}
+
+:global(.dark) .link span{
+   color: var(--white);
 }
 
 .link:hover span{

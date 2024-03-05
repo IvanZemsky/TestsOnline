@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CategoryList.module.css";
 import Category from "../Category/Category";
+import AllCategoriesBtn from './../UI/AllCategoriesBtn/AllCategoriesBtn';
 
 const categories = ["Программирование", "Математика", "Языки", "История"];
 
@@ -10,7 +11,6 @@ const CategoryList = ({ handleCategoryClick }) => {
          <Category
             category="Все"
             handleCategoryClick={handleCategoryClick}
-            
          />
 
          {categories.map((category) => (
@@ -20,6 +20,8 @@ const CategoryList = ({ handleCategoryClick }) => {
                category={category}
             />
          ))}
+
+         <AllCategoriesBtn />
       </div>
    );
 };

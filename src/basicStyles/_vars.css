@@ -1,16 +1,32 @@
 :root{
    --default-black: #000;
-   --black: #3a3a3a;
+   --light-black: #151515;
+   --dark-grey: #3a3a3a;
    --white: #fff;
    --blue: #475AFF;
    --light-blue: #B1E3FF;
    --sky-blue: #58AFFF;
    --sea-blue: #84C4FF;
-   --invisible-blue: #E0F0FF;
    --super-light-blue: #d1f4ff;
+   --invisible-blue: #E0F0FF;
    --red: #ff5454;
    --green: #39c539;
    --gradient-light-blue: #6bb8ff;
    --gradient-purple: #d18cffde;
-   --gradient: linear-gradient(45deg, #6bb8ff, #d18cffde);
+
+   --background: var(--white);
+   --super-text: var(--default-black);
+   --dark-text: var(--blue);
+   --gradient: linear-gradient(45deg, var(--gradient-light-blue), var(--gradient-purple));
+
+}
+
+.dark{
+   --background: var(--light-black);
+   --text: var(--white);
+   --super-text: var(--white);
+
+   --gradient-light-blue: #6f9bff;
+   --gradient-purple: #c164ffde;
+   --gradient: linear-gradient(45deg, var(--gradient-light-blue), var(--gradient-purple));
 }
