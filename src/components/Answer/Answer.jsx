@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { useDispatch } from "react-redux";
 import styles from "./Answer.module.css";
 
 const Answer = memo(({ answer, id, value, setSelectedAnswerIndex }) => {

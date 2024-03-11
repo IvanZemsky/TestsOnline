@@ -15,3 +15,7 @@
    font-weight: 700;
    color: var(--sky-blue);
 }
+
+:global(.dark) .testName{
+   color: var(--text);
+}

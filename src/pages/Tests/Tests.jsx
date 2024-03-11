@@ -5,23 +5,20 @@ import styles from "./Tests.module.css";
 import TestsSearch from "../../components/TestsSearch/TestsSearch";
 import EmptyTests from "../../components/EmptyTests/EmptyTests";
 import CategoryList from "../../components/CategoryList/CategoryList";
+import { useDebounce } from "../../hooks/useDebounce";
 
 const Tests = () => {
    const [category, setCategory] = useState("Все");
    const [searchInputValue, setSearchInputValue] = useState("");
 
    useEffect(() => {
-      const category = localStorage.getItem('category');
-      setCategory(category ? category : 'Все');
-   }, [])
+      const category = localStorage.getItem("category");
+      setCategory(category ? category : "Все");
+   }, []);
 
    useEffect(() => {
-      localStorage.setItem('category', category);
-   }, [category])
-
-   // state for tests
-   // getting from useEffect
-   // loader
+      localStorage.setItem("category", category);
+   }, [category]);
 
    const filtered = tests
       .filter((test) =>

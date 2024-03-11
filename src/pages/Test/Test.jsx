@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
 import {clearCurrentTestState, setCurrentTest} from "../../store/slices/testSlice";
 
-const TestPage = () => {
+const Test = () => {
    let { id } = useParams();
    id = +id;
 
@@ -42,4 +42,4 @@ const TestPage = () => {
    );
 };
 
-export default TestPage;
+export default Test;
