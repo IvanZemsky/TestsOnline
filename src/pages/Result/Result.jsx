@@ -20,7 +20,7 @@ const Result = () => {
    const resultCounter = testResults.resultCounter;
 
    return (
-      <div className={styles.resultPage}>
+      <main className={styles.resultPage}>
          <div className={[styles.content, "wrapper"].join(" ")}>
             <header className={styles.resultHeader}>
                <h1 className={styles.testName}>{test.name}</h1>
@@ -40,7 +40,7 @@ const Result = () => {
                ))}
             </ul>
          </div>
-      </div>
+      </main>
    );
 };
 

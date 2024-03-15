@@ -7,11 +7,13 @@
 }
 
 .questionTitle{
-   font-size: 32px;
+   font-size: 28px;
    font-weight: 500;
 }
 
 .questionSelection{
+   display: flex;
+   gap: 5px;
    font-size: 24px;
    color: #4B4B4B;
 }

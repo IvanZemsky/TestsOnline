@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useCallback, useRef } from "react";
 
-function useDebounce(value, msDelay) {
-   const [debouncedValue, setDebouncedValue] = useState('');
+export default function useDebounce(callback, msDelay) {
+   const timer = useRef();
+
+   const debouncedCallback = useCallback((...args) => {
+      if (timer.current) {
+         clearTimeout(timer.current)
+      }
    
-   useEffect(() => {
-      const timeout = setTimeout(() => {
-         setDebouncedValue(value)
-      }, msDelay);
-      
-      return () => clearTimeout(timeout)
-   }, [value])
+      timer.current = setTimeout(() => {
+         callback(...args);
+      }, msDelay)
+   }, [callback, msDelay])
 
-   return debouncedValue
+   return debouncedCallback
 }
-
-export {useDebounce}

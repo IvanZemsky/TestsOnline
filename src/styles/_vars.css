@@ -30,6 +30,7 @@
    --dark-background: var(--dark-grey);
    --light-background: var(--light-grey);
    --text: var(--white);
+   --dark-text: var(--white);
    --super-text: var(--white);
 
    --gradient-light-blue: #6f9bff;

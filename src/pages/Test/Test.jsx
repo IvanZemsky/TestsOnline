@@ -27,7 +27,7 @@ const Test = () => {
    if (!test) return <p>Ошибка!</p> // обработать
 
    return (
-      <div className={styles.testPage}>
+      <main className={styles.testPage}>
          <div className={[styles.content, "wrapper"].join(" ")}>
             <h1 className={styles.testName}>{test.name}</h1>
 
@@ -38,7 +38,7 @@ const Test = () => {
                questionAmount={test.questions.length}
             />
          </div>
-      </div>
+      </main>
    );
 };
 

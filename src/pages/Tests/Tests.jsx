@@ -5,35 +5,26 @@ import styles from "./Tests.module.css";
 import TestsSearch from "../../components/TestsSearch/TestsSearch";
 import EmptyTests from "../../components/EmptyTests/EmptyTests";
 import CategoryList from "../../components/CategoryList/CategoryList";
-import { useDebounce } from "../../hooks/useDebounce";
+import useDebounce from "../../hooks/useDebounce";
+import filterBySearch from "../../utils/filterBySearch";
+import filterByCategory from "../../utils/filterByCategory";
 
 const Tests = () => {
    const [category, setCategory] = useState("Все");
-   const [searchInputValue, setSearchInputValue] = useState("");
+   const [searchInputValue, setSearchInputValue] = useState("")
 
    useEffect(() => {
-      const category = localStorage.getItem("category");
-      setCategory(category ? category : "Все");
+      const category = localStorage.getItem("category")
+      setCategory(category ? category : "Все")
    }, []);
 
    useEffect(() => {
-      localStorage.setItem("category", category);
-   }, [category]);
+      localStorage.setItem("category", category)
+   }, [category])
 
-   const filtered = tests
-      .filter((test) =>
-         category !== "Все" ? test.category === category : test
-      )
-      .filter(
-         // DEBOUNCE !!!
-         (test) => {
-            const value = searchInputValue.toLowerCase();
-            return (
-               test.name.toLowerCase().includes(value) ||
-               test.desc.toLowerCase().includes(value)
-            );
-         }
-      );
+   let filtered = filterByCategory(tests, category, "Все")
+   // DEBOUNCE
+   filtered = filterBySearch(filtered, searchInputValue, ["name", "desc"])
 
    const handleCategoryClick = (category) => {
       setSearchInputValue("");
@@ -41,7 +32,7 @@ const Tests = () => {
    };
 
    return (
-      <div className={styles.tests}>
+      <main className={styles.tests}>
          <div className={[styles.testsContent, "wrapper"].join(" ")}>
             <div className={styles.panel}>
                <TestsSearch
@@ -59,7 +50,7 @@ const Tests = () => {
                )}
             </div>
          </div>
-      </div>
+      </main>
    );
 };
 

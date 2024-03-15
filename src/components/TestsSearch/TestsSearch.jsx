@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./TestsSearch.module.css";
 
 const TestsSearch = ({ searchInputValue, setSearchInputValue }) => {
+
    return (
       <input
          type="text"
