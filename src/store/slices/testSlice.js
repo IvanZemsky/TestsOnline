@@ -14,7 +14,7 @@ const testSlice = createSlice({
    reducers: {
       setCurrentTest(state, action) {
          state.currentTest = action.payload;
-         console.log("cleared", current(state)); // ***
+         console.log(state.currentTest)
       },
 
       nextQuestion(state) {
@@ -34,8 +34,6 @@ const testSlice = createSlice({
             selectedAnswerIndex: +selectedAnswerIndex,
             correctAnswerIndex,
          });
-
-         console.info('cr', current(state.currentResult)); // ***
       },
 
       addToResults(state) {
@@ -53,7 +51,6 @@ const testSlice = createSlice({
          } else {
             state.results[resultIndex] = result;
          }
-         console.info(current(state.results)); // ***
       },
 
       clearCurrentTestState: (state) => {

@@ -3,23 +3,25 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./ResultPage.module.css";
 import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
-import tests from "../../tests";
 import ResultsError from "../../components/ResultsError/ResultsError";
+import { testAPI } from "../../services/TestService";
 
 const Result = () => {
-   const { id } = useParams();
+   let { id } = useParams();
+   id = +id;
 
    const testResults = useSelector((state) => state.test.results).find(
-      (result) => result.testId === +id
+      (result) => result.testId === id
    );
 
-   const test = tests.find((test) => test.id === +id); // переписать на запросы
+   const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
 
    if (!testResults) return <ResultsError testId={id}/>;
 
    const resultCounter = testResults.resultCounter;
 
    return (
+      isLoading ? (<p>Loading</p>) :
       <main className={styles.resultPage}>
          <div className={[styles.content, "wrapper"].join(" ")}>
             <header className={styles.resultHeader}>

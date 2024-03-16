@@ -12,9 +12,6 @@ const themeSlice = createSlice({
          state.theme = state.theme === 'light' ? 'dark' : 'light';
       }
    },
-   extraReducers: (build) => {
-      
-   }
 })
 
 export default themeSlice;

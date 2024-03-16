@@ -29,7 +29,7 @@
    --background: var(--light-black);
    --dark-background: var(--dark-grey);
    --light-background: var(--light-grey);
-   --text: var(--white);
+   --text: #e8e8e8;
    --dark-text: var(--white);
    --super-text: var(--white);
 

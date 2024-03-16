@@ -2,10 +2,10 @@ import React, { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Test.module.css";
 import Question from "../../components/Question/Question";
-import tests from "../../tests";
 import { useDispatch, useSelector } from "react-redux";
 import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
 import {clearCurrentTestState, setCurrentTest} from "../../store/slices/testSlice";
+import { testAPI } from "../../services/TestService";
 
 const Test = () => {
    let { id } = useParams();
@@ -13,20 +13,19 @@ const Test = () => {
 
    const dispatch = useDispatch();
 
+   const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
+
    const currentQuestionIndex = useSelector(
       (state) => state.test.currentQuestionIndex
    );
 
-   const test = tests.find((test) => test.id === id);
-
    useEffect(() => {
       dispatch(clearCurrentTestState())
       dispatch(setCurrentTest(test));
-   }, []);
-
-   if (!test) return <p>Ошибка!</p> // обработать
+   }, [test]);
 
    return (
+      isLoading ? (<p>Loading</p>) :
       <main className={styles.testPage}>
          <div className={[styles.content, "wrapper"].join(" ")}>
             <h1 className={styles.testName}>{test.name}</h1>
