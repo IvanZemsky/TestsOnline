@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./CategoryList.module.css";
 import Category from "../Category/Category";
-import AllCategoriesBtn from './../UI/AllCategoriesBtn/AllCategoriesBtn';
+import AllCategoriesBtn from "./../UI/AllCategoriesBtn/AllCategoriesBtn";
 
-const categories = ["Программирование", "Математика", "Языки", "История"];
+const categories = [
+   { name: "Все", value: "all"},
+   { name: "Программирование", value: "programming", },
+   { name: "Математика", value: "math", },
+   { name: "Языки", value: "languages", },
+   { name: "История", value: "history", },
+];
 
 const CategoryList = ({ handleCategoryClick }) => {
    return (
       <div className={styles.categories}>
-         <Category
-            category="Все"
-            handleCategoryClick={handleCategoryClick}
-         />
-
+         
          {categories.map((category) => (
             <Category
-               key={category}
+               key={category.value}
                handleCategoryClick={handleCategoryClick}
                category={category}
             />

@@ -1,36 +1,14 @@
-import React, { useState } from "react";
+import React  from "react";
 import Answer from "../Answer/Answer";
 import styles from "./AnswerList.module.css";
-import { useDispatch } from "react-redux";
-import { nextQuestion, addToCurrentResult, addToResults } from "../../store/slices/testSlice";
-import { useNavigate } from "react-router-dom";
 import NextQuestionBtn from "../UI/NextQuestionBtn/NextQuestionBtn";
+import useNextQuestion from "./../../hooks/useNextQuestion";
 
 const AnswerList = (props) => {
-   const {
-      answers,
-      questionAmount,
-      currentQuestionIndex,
-      correctAnswerIndex,
-   } = props;
+   const { answers, questionAmount, currentQuestionIndex, correctAnswerIndex } = props;
 
-   const dispatch = useDispatch();
-   const navigate = useNavigate();
-
-   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-
-   const onNextQuestionClick = () => {
-      if (currentQuestionIndex >= questionAmount - 1) {
-         dispatch(addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }));
-         dispatch(addToResults());
-         navigate(`result`); // currentTestResult будет очищен
-         return;
-      }
-
-      dispatch(addToCurrentResult({ selectedAnswerIndex, correctAnswerIndex }));
-      dispatch(nextQuestion({ selectedAnswerIndex }));
-      setSelectedAnswerIndex(null);
-   };
+   const { selectedAnswerIndex, setSelectedAnswerIndex, onNextQuestionClick } =
+      useNextQuestion(currentQuestionIndex, questionAmount, correctAnswerIndex);
 
    return (
       <form className={styles.controls}>

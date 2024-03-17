@@ -1,26 +1,22 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import AnswerList from "../AnswerList/AnswerList";
 import styles from "./Question.module.css";
-import QuestionTitle from "../UI/QuestionTitle/QuestionTitle";
 
-const Question = ({test}) => {
-
+const Question = ({ test }) => {
    const currentQuestionIndex = useSelector(
       (state) => state.test.currentQuestionIndex
    );
-   
+
    const currentQuestion = test.questions[currentQuestionIndex];
-   const answers = currentQuestion.answers;
 
    return (
       <section className={styles.question}>
-
-         <QuestionTitle questionTitle={currentQuestion.title}/>
+         <h2 className={styles.questionTitle}>{currentQuestion.title}</h2>
 
          <AnswerList
             testId={test.id}
-            answers={answers}
+            answers={currentQuestion.answers}
             questionAmount={test.questions.length}
             currentQuestionIndex={currentQuestionIndex}
             correctAnswerIndex={currentQuestion.correctAnswer}

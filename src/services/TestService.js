@@ -17,5 +17,11 @@ export const testAPI = createApi({
             url: `/test/${testId}.json`
          }),
       }),
+
+      fetchTestByCategory: build.query({
+         query: (category) => ({
+            url: `/test/${category}/${category}.json`
+         }),
+      }),
    }),
 })

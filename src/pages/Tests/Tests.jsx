@@ -7,7 +7,7 @@ import CategoryList from "../../components/CategoryList/CategoryList";
 import { testAPI } from './../../services/TestService';
 
 const Tests = () => {
-   const [category, setCategory] = useState("Все");
+   const [category, setCategory] = useState({name: "Все", value: "All"});
    const [searchInputValue, setSearchInputValue] = useState("")
 
    const {data: testPreviews, error, isLoading} = testAPI.useFetchPreviewsQuery('');
