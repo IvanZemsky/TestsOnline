@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/TestsOnline/static/css/main.0f079989.css",
-    "main.js": "/TestsOnline/static/js/main.ea4d9032.js",
-    "static/css/648.9b8c9772.chunk.css": "/TestsOnline/static/css/648.9b8c9772.chunk.css",
-    "static/js/648.808d9cf4.chunk.js": "/TestsOnline/static/js/648.808d9cf4.chunk.js",
+    "main.js": "/TestsOnline/static/js/main.61e74b9c.js",
+    "static/css/120.c7bc2018.chunk.css": "/TestsOnline/static/css/120.c7bc2018.chunk.css",
+    "static/js/120.02076057.chunk.js": "/TestsOnline/static/js/120.02076057.chunk.js",
     "static/css/852.a48d9caa.chunk.css": "/TestsOnline/static/css/852.a48d9caa.chunk.css",
     "static/js/852.1f9e6022.chunk.js": "/TestsOnline/static/js/852.1f9e6022.chunk.js",
     "static/css/40.0c58aaf6.chunk.css": "/TestsOnline/static/css/40.0c58aaf6.chunk.css",
@@ -17,9 +17,9 @@
     "static/media/Montserrat-Regular.ttf": "/TestsOnline/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "index.html": "/TestsOnline/index.html",
     "main.0f079989.css.map": "/TestsOnline/static/css/main.0f079989.css.map",
-    "main.ea4d9032.js.map": "/TestsOnline/static/js/main.ea4d9032.js.map",
-    "648.9b8c9772.chunk.css.map": "/TestsOnline/static/css/648.9b8c9772.chunk.css.map",
-    "648.808d9cf4.chunk.js.map": "/TestsOnline/static/js/648.808d9cf4.chunk.js.map",
+    "main.61e74b9c.js.map": "/TestsOnline/static/js/main.61e74b9c.js.map",
+    "120.c7bc2018.chunk.css.map": "/TestsOnline/static/css/120.c7bc2018.chunk.css.map",
+    "120.02076057.chunk.js.map": "/TestsOnline/static/js/120.02076057.chunk.js.map",
     "852.a48d9caa.chunk.css.map": "/TestsOnline/static/css/852.a48d9caa.chunk.css.map",
     "852.1f9e6022.chunk.js.map": "/TestsOnline/static/js/852.1f9e6022.chunk.js.map",
     "40.0c58aaf6.chunk.css.map": "/TestsOnline/static/css/40.0c58aaf6.chunk.css.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.0f079989.css",
-    "static/js/main.ea4d9032.js"
+    "static/js/main.61e74b9c.js"
   ]
 }
