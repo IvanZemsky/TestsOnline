@@ -1,12 +1,19 @@
 import React from "react";
 import styles from "./Category.module.css";
+import { useDispatch } from 'react-redux';
+import { setCategory } from "../../store/slices/filterSlice";
 
-const Category = ({category, handleCategoryClick }) => {
+const Category = ({category}) => {
+   const dispatch = useDispatch();
+
+   const handleCategoryClick = (newCategory) => {
+      dispatch(setCategory(newCategory));
+   };
 
    const isChecked = category.value === 'all' ? true : false;
 
    return (
-      <div>
+      <div className={styles.category}>
          <input
             className={styles.categoryRadio}
             type="radio"
@@ -14,7 +21,7 @@ const Category = ({category, handleCategoryClick }) => {
             name="category"
             value={category.value}
             defaultChecked={isChecked}
-            onChange={() => handleCategoryClick(category)}
+            onChange={() => handleCategoryClick(category.value)}
          />
          <label
             className={styles.categoryText}

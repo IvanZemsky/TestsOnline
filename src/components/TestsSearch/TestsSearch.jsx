@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "./TestsSearch.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchText } from "../../store/slices/filterSlice";
 
 const TestsSearch = ({ searchInputValue, setSearchInputValue }) => {
+   const dispatch = useDispatch();
+
+   const searchText = useSelector(state => state.filter.filters.searchText)
 
    return (
       <input
@@ -9,9 +14,9 @@ const TestsSearch = ({ searchInputValue, setSearchInputValue }) => {
          className={styles.testsSearch}
          placeholder="Поиск"
          onChange={(event) =>
-            setSearchInputValue(event.target.value)
+            dispatch(setSearchText((event.target.value)))
          }
-         value={searchInputValue}
+         value={searchText}
       />
    );
 };

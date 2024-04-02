@@ -22,3 +22,9 @@
    background-color: var(--sky-blue);
    color: var(--white);
 }
+
+@media screen and (max-width: 1175px) {
+   .category{
+      display: none;
+   }
+}

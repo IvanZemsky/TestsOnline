@@ -12,7 +12,7 @@
    height: 100%;
    border-radius: 22.5px;
    padding: 20px 20px 15px 20px;
-   background-color: var(--white);
+   background-color: rgb(235, 235, 235);
    overflow: hidden;
 }
 
@@ -74,4 +74,10 @@
 
 .startBtn:hover{
    box-shadow: inset 100px 100px var(--gradient-light-blue);
+}
+
+@media screen and (max-width: 1055px) {
+   .name{
+     font-size: 16px;
+   }
 }

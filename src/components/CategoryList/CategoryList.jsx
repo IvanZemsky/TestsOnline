@@ -11,14 +11,13 @@ const categories = [
    { name: "История", value: "history", },
 ];
 
-const CategoryList = ({ handleCategoryClick }) => {
+const CategoryList = () => {
    return (
       <div className={styles.categories}>
          
          {categories.map((category) => (
             <Category
                key={category.value}
-               handleCategoryClick={handleCategoryClick}
                category={category}
             />
          ))}

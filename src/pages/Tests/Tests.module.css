@@ -22,3 +22,12 @@
    background-color: var(--background);
    z-index: 100;
 }
+
+@media screen and (max-width: 1055px) {
+   .testCards{
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+   }
+}

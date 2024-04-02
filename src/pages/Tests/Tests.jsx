@@ -4,33 +4,23 @@ import styles from "./Tests.module.css";
 import TestsSearch from "../../components/TestsSearch/TestsSearch";
 import EmptyTests from "../../components/EmptyTests/EmptyTests";
 import CategoryList from "../../components/CategoryList/CategoryList";
-import { testAPI } from './../../services/TestService';
+import useFilter from "../../hooks/useFilter";
 
 const Tests = () => {
-   const [category, setCategory] = useState({name: "Все", value: "All"});
-   const [searchInputValue, setSearchInputValue] = useState("")
 
-   const {data: testPreviews, error, isLoading} = testAPI.useFetchPreviewsQuery('');
-
-   const handleCategoryClick = (category) => {
-      setSearchInputValue("");
-      setCategory(category);
-   };
+   const {previews, error, isLoading} = useFilter();
 
    return (
       <main className={styles.tests}>
          <div className={[styles.testsContent, "wrapper"].join(" ")}>
             <div className={styles.panel}>
-               <TestsSearch
-                  searchInputValue={searchInputValue}
-                  setSearchInputValue={setSearchInputValue}
-               />
-               <CategoryList handleCategoryClick={handleCategoryClick} />
+               <TestsSearch/>
+               <CategoryList/>
             </div>
 
             <div className={styles.testCards}>
-               {testPreviews ? (
-                  testPreviews.map((preview) => <TestCard key={preview.id} test={preview} />)
+               {previews ? (
+                  previews.map((preview) => <TestCard key={preview.id} test={preview} />)
                ) : (
                   <EmptyTests />
                )}

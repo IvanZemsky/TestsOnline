@@ -18,9 +18,9 @@ export const testAPI = createApi({
          }),
       }),
 
-      fetchTestByCategory: build.query({
+      fetchPreviewsByCategory: build.query({
          query: (category) => ({
-            url: `/test/${category}/${category}.json`
+            url: `/categories/${category}/${category}.json`
          }),
       }),
    }),

@@ -14,6 +14,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { testAPI } from "../services/TestService";
+import filterSlice from './slices/filterSlice';
 
 const persistConfig = {
    key: "test",
@@ -21,7 +22,7 @@ const persistConfig = {
    whitelist: ["test", "theme"],
 };
 
-const rootReducer = combineSlices(testSlice, themeSlice, testAPI)
+const rootReducer = combineSlices(testSlice, themeSlice, filterSlice, testAPI)
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
