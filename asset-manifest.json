@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/TestsOnline/static/css/main.0f079989.css",
-    "main.js": "/TestsOnline/static/js/main.61e74b9c.js",
-    "static/css/120.c7bc2018.chunk.css": "/TestsOnline/static/css/120.c7bc2018.chunk.css",
-    "static/js/120.02076057.chunk.js": "/TestsOnline/static/js/120.02076057.chunk.js",
-    "static/css/852.a48d9caa.chunk.css": "/TestsOnline/static/css/852.a48d9caa.chunk.css",
+    "main.css": "/TestsOnline/static/css/main.e20b2eb9.css",
+    "main.js": "/TestsOnline/static/js/main.013e0527.js",
+    "static/css/396.714f42d1.chunk.css": "/TestsOnline/static/css/396.714f42d1.chunk.css",
+    "static/js/396.d69f0583.chunk.js": "/TestsOnline/static/js/396.d69f0583.chunk.js",
+    "static/css/852.e0c2defa.chunk.css": "/TestsOnline/static/css/852.e0c2defa.chunk.css",
     "static/js/852.1f9e6022.chunk.js": "/TestsOnline/static/js/852.1f9e6022.chunk.js",
     "static/css/40.0c58aaf6.chunk.css": "/TestsOnline/static/css/40.0c58aaf6.chunk.css",
     "static/js/40.f298e317.chunk.js": "/TestsOnline/static/js/40.f298e317.chunk.js",
@@ -16,11 +16,11 @@
     "static/media/Montserrat-Medium.ttf": "/TestsOnline/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/Montserrat-Regular.ttf": "/TestsOnline/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "index.html": "/TestsOnline/index.html",
-    "main.0f079989.css.map": "/TestsOnline/static/css/main.0f079989.css.map",
-    "main.61e74b9c.js.map": "/TestsOnline/static/js/main.61e74b9c.js.map",
-    "120.c7bc2018.chunk.css.map": "/TestsOnline/static/css/120.c7bc2018.chunk.css.map",
-    "120.02076057.chunk.js.map": "/TestsOnline/static/js/120.02076057.chunk.js.map",
-    "852.a48d9caa.chunk.css.map": "/TestsOnline/static/css/852.a48d9caa.chunk.css.map",
+    "main.e20b2eb9.css.map": "/TestsOnline/static/css/main.e20b2eb9.css.map",
+    "main.013e0527.js.map": "/TestsOnline/static/js/main.013e0527.js.map",
+    "396.714f42d1.chunk.css.map": "/TestsOnline/static/css/396.714f42d1.chunk.css.map",
+    "396.d69f0583.chunk.js.map": "/TestsOnline/static/js/396.d69f0583.chunk.js.map",
+    "852.e0c2defa.chunk.css.map": "/TestsOnline/static/css/852.e0c2defa.chunk.css.map",
     "852.1f9e6022.chunk.js.map": "/TestsOnline/static/js/852.1f9e6022.chunk.js.map",
     "40.0c58aaf6.chunk.css.map": "/TestsOnline/static/css/40.0c58aaf6.chunk.css.map",
     "40.f298e317.chunk.js.map": "/TestsOnline/static/js/40.f298e317.chunk.js.map",
@@ -28,7 +28,7 @@
     "844.4fd10e97.chunk.js.map": "/TestsOnline/static/js/844.4fd10e97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f079989.css",
-    "static/js/main.61e74b9c.js"
+    "static/css/main.e20b2eb9.css",
+    "static/js/main.013e0527.js"
   ]
 }
