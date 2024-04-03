@@ -23,6 +23,9 @@
    --dark-text: var(--blue);
    --gradient: linear-gradient(45deg, var(--gradient-light-blue), var(--gradient-purple));
 
+   --selected-answer: var(--sea-blue);
+   --checked-answer: var(--sky-blue);
+
 }
 
 .dark{
@@ -36,4 +39,7 @@
    --gradient-light-blue: #6f9bff;
    --gradient-purple: #c164ffde;
    --gradient: linear-gradient(45deg, var(--gradient-light-blue), var(--gradient-purple));
+
+   --selected-answer: var(--dark-grey);
+   --checked-answer: var(--light-grey);
 }

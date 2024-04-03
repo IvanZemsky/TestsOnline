@@ -3,19 +3,41 @@
    justify-content: center;
    align-items: center;
    width: 41%;
+   border-radius: 35px;
+   font-size: 50px;
    background-color: var(--dark-background);
+   transition: 0.14s all linear;
 }
 
 .nextQuestionBtn svg{
    width: 42px;
    height: 74px;
    fill: var(--sea-blue);
+   transition: 0.14s all linear;
 }
 
 .nextQuestionBtn:hover{
-  background-color: var(--light-blue);
+  background-color: var(--checked-answer);
 }
 
 .nextQuestionBtn:hover svg{
    fill: #FFF;
+}
+
+@media screen and (max-width: 575px) {
+   .nextQuestionBtn{
+      width: 100%;
+      font-size: 25px;
+      border-radius: 23px;
+      padding: 15px;
+   }
+}
+
+@media (hover: none) and (pointer: coarse) {
+   .nextQuestionBtn:hover{
+      background-color: var(--dark-background);
+   }
+   .nextQuestionBtn:active{
+      background-color: var(--checked-answer);
+   }
 }

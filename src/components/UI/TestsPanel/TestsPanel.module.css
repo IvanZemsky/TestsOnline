@@ -1,0 +1,16 @@
+.panel{
+   position: sticky;
+   top: 0;
+   padding: 15px 0;
+   margin-bottom: 10px;
+   border-bottom: 2px solid var(--sky-blue);
+   background-color: var(--background);
+   z-index: 100;
+}
+
+.content{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 25px;
+}

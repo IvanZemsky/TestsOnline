@@ -2,6 +2,12 @@
    padding: 12px 0;
    border-bottom: 5px solid;
    border-image: var(--gradient) 1;
+   background-color: #dfeaff;
+   transition: background 0.15s linear;
+}
+
+:global(.dark) .header{
+   background-color: #282828;
 }
 
 .content{

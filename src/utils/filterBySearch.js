@@ -1,4 +1,4 @@
-export default function filterTestsBySearch(data, searchValue, dataFields) {
+export default function filterBySearch(data, searchValue, dataFields) {
    return data.filter(
       (data) => {
          const value = searchValue.toLowerCase();

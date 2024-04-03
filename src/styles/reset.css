@@ -4,6 +4,14 @@
    padding: 0;
 }
 
+body {
+   font-size: 21px;
+   font-family: 'Montserrat';
+   font-weight: 400;
+   font-style: normal;
+   overflow-y: scroll;
+}
+
 ul, ol, li{
    list-style: none;
 }

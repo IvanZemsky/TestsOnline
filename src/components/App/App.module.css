@@ -1,11 +1,3 @@
-body {
-   font-size: 21px;
-   font-family: 'Montserrat';
-   font-weight: 400;
-   font-style: normal;
-   overflow-y: scroll;
-}
-
 .app{
    display: grid;
    grid-template-rows: auto 1fr;
@@ -13,4 +5,10 @@ body {
    min-height: 100vh;
    color: var(--text);
    background-color: var(--background);
+   background: url(../../assets/img/background.png) repeat;
+   transition: 0.15s all linear;
+}
+
+:global(.dark).app{
+   background: var(--background);
 }
