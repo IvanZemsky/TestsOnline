@@ -19,7 +19,7 @@ import filterSlice from './slices/filterSlice';
 const persistConfig = {
    key: "test",
    storage,
-   whitelist: ["test", "theme"],
+   whitelist: ["test", "theme", "filter"],
 };
 
 const rootReducer = combineSlices(testSlice, themeSlice, filterSlice, testAPI)

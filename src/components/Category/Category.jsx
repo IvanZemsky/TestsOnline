@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./Category.module.css";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setCategory } from "../../store/slices/filterSlice";
 
 const Category = ({category}) => {
    const dispatch = useDispatch();
 
+   const currentCategory = useSelector(state => state.filter.filters.category);
+
+   const isChecked = category.value === currentCategory ? true : false;
+
    const handleCategoryClick = (newCategory) => {
       dispatch(setCategory(newCategory));
    };
-
-   const isChecked = category.value === 'all' ? true : false;
 
    return (
       <div className={styles.category}>
