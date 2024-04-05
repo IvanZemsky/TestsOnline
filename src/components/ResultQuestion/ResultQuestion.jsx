@@ -3,8 +3,8 @@ import styles from "./ResultQuestion.module.css";
 
 const ResultQuestion = ({ question, results, index }) => {
    const isAnswerCorrect =
-      question.answers[results[index].selectedAnswerIndex] ===
-      question.answers[results[index].correctAnswerIndex];
+      question.answers[results[index]?.selectedAnswerIndex] ===
+      question.answers[results[index]?.correctAnswerIndex];
 
    const answerStatusStyle = isAnswerCorrect
       ? styles.correctAnswer

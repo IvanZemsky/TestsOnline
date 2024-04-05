@@ -6,7 +6,7 @@ const initialState = {
    currentResult: [], // {questionIndex, selectedAnswerIndex, correctAnswerIndex}
    currentResultCounter: 0,
    results: [], // {testId, resultCounter, {questionIndex, selectedAnswerIndex, correctAnswerIndex}[]}
-}
+};
 
 const testSlice = createSlice({
    name: "test",
@@ -14,7 +14,9 @@ const testSlice = createSlice({
    reducers: {
       setCurrentTest(state, action) {
          state.currentTest = action.payload;
-         console.log(state.currentTest)
+         state.currentQuestionIndex = 0;
+         state.currentResult = [];
+         console.log(state.currentTest);
       },
 
       nextQuestion(state) {
@@ -34,6 +36,7 @@ const testSlice = createSlice({
             selectedAnswerIndex: +selectedAnswerIndex,
             correctAnswerIndex,
          });
+         console.log(current(state.currentResult))
       },
 
       addToResults(state) {
@@ -51,12 +54,10 @@ const testSlice = createSlice({
          } else {
             state.results[resultIndex] = result;
          }
+         state.currentQuestionIndex = 0; // new test attempt will be started from first question
+         state.currentResult = [];
+         console.log(current(state.results))
       },
-
-      clearCurrentTestState: (state) => {
-         return {...initialState, results: state.results}
-      },
-
    },
 });
 
@@ -67,5 +68,4 @@ export const {
    nextQuestion,
    addToCurrentResult,
    addToResults,
-   clearCurrentTestState
 } = testSlice.actions;

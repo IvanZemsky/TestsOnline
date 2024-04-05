@@ -5,10 +5,11 @@
    border-left: 10px solid var(--sky-blue);
    border-radius: 32px;
    font-size: 20px;
+   background-color: var(--background);
 }
 
 .question:hover{
-   background-color: #ededff;
+   background-color: #ececec;
 }
 
 :global(.dark) .question:hover {

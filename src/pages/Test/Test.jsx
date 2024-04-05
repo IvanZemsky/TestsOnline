@@ -4,7 +4,7 @@ import styles from "./Test.module.css";
 import Question from "../../components/Question/Question";
 import { useDispatch, useSelector } from "react-redux";
 import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
-import {clearCurrentTestState, setCurrentTest} from "../../store/slices/testSlice";
+import {setCurrentTest} from "../../store/slices/testSlice";
 import { testAPI } from "../../services/TestService";
 
 const Test = () => {
@@ -20,7 +20,6 @@ const Test = () => {
    );
 
    useEffect(() => {
-      dispatch(clearCurrentTestState())
       dispatch(setCurrentTest(test));
    }, [test]);
 
