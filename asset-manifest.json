@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TestsOnline/static/css/main.92346fed.css",
-    "main.js": "/TestsOnline/static/js/main.aaf3c638.js",
-    "static/css/396.714f42d1.chunk.css": "/TestsOnline/static/css/396.714f42d1.chunk.css",
-    "static/js/396.2b7e5d3c.chunk.js": "/TestsOnline/static/js/396.2b7e5d3c.chunk.js",
+    "main.css": "/TestsOnline/static/css/main.a3ea1d41.css",
+    "main.js": "/TestsOnline/static/js/main.21742c7c.js",
+    "static/css/664.b13f2018.chunk.css": "/TestsOnline/static/css/664.b13f2018.chunk.css",
+    "static/js/664.e1bf3b2b.chunk.js": "/TestsOnline/static/js/664.e1bf3b2b.chunk.js",
     "static/css/852.081b5824.chunk.css": "/TestsOnline/static/css/852.081b5824.chunk.css",
     "static/js/852.795f6bf8.chunk.js": "/TestsOnline/static/js/852.795f6bf8.chunk.js",
     "static/css/40.21d4c535.chunk.css": "/TestsOnline/static/css/40.21d4c535.chunk.css",
     "static/js/40.69ef6019.chunk.js": "/TestsOnline/static/js/40.69ef6019.chunk.js",
-    "static/css/844.96b129ca.chunk.css": "/TestsOnline/static/css/844.96b129ca.chunk.css",
+    "static/css/844.bbc0dd4d.chunk.css": "/TestsOnline/static/css/844.bbc0dd4d.chunk.css",
     "static/js/844.4fd10e97.chunk.js": "/TestsOnline/static/js/844.4fd10e97.chunk.js",
     "static/media/Montserrat-ExtraBold.ttf": "/TestsOnline/static/media/Montserrat-ExtraBold.6c8b198832c88c649faa.ttf",
     "static/media/Montserrat-Bold.ttf": "/TestsOnline/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
@@ -16,19 +16,19 @@
     "static/media/Montserrat-Medium.ttf": "/TestsOnline/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/Montserrat-Regular.ttf": "/TestsOnline/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "index.html": "/TestsOnline/index.html",
-    "main.92346fed.css.map": "/TestsOnline/static/css/main.92346fed.css.map",
-    "main.aaf3c638.js.map": "/TestsOnline/static/js/main.aaf3c638.js.map",
-    "396.714f42d1.chunk.css.map": "/TestsOnline/static/css/396.714f42d1.chunk.css.map",
-    "396.2b7e5d3c.chunk.js.map": "/TestsOnline/static/js/396.2b7e5d3c.chunk.js.map",
+    "main.a3ea1d41.css.map": "/TestsOnline/static/css/main.a3ea1d41.css.map",
+    "main.21742c7c.js.map": "/TestsOnline/static/js/main.21742c7c.js.map",
+    "664.b13f2018.chunk.css.map": "/TestsOnline/static/css/664.b13f2018.chunk.css.map",
+    "664.e1bf3b2b.chunk.js.map": "/TestsOnline/static/js/664.e1bf3b2b.chunk.js.map",
     "852.081b5824.chunk.css.map": "/TestsOnline/static/css/852.081b5824.chunk.css.map",
     "852.795f6bf8.chunk.js.map": "/TestsOnline/static/js/852.795f6bf8.chunk.js.map",
     "40.21d4c535.chunk.css.map": "/TestsOnline/static/css/40.21d4c535.chunk.css.map",
     "40.69ef6019.chunk.js.map": "/TestsOnline/static/js/40.69ef6019.chunk.js.map",
-    "844.96b129ca.chunk.css.map": "/TestsOnline/static/css/844.96b129ca.chunk.css.map",
+    "844.bbc0dd4d.chunk.css.map": "/TestsOnline/static/css/844.bbc0dd4d.chunk.css.map",
     "844.4fd10e97.chunk.js.map": "/TestsOnline/static/js/844.4fd10e97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92346fed.css",
-    "static/js/main.aaf3c638.js"
+    "static/css/main.a3ea1d41.css",
+    "static/js/main.21742c7c.js"
   ]
 }
