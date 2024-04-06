@@ -13,10 +13,15 @@ const testSlice = createSlice({
    initialState,
    reducers: {
       setCurrentTest(state, action) {
-         state.currentTest = action.payload;
-         state.currentQuestionIndex = 0;
-         state.currentResult = [];
-         console.log(state.currentTest);
+         const { id } = action.payload || {};
+         const isIdEqual = !state.currentTest.id || state.currentTest.id !== id
+         if (id && isIdEqual) {
+            state.currentTest = action.payload;
+            state.currentQuestionIndex = 0;
+            state.currentResultCounter = 0;
+            state.currentResult = [];
+            console.log(state.currentTest);
+         }
       },
 
       nextQuestion(state) {
@@ -36,7 +41,7 @@ const testSlice = createSlice({
             selectedAnswerIndex: +selectedAnswerIndex,
             correctAnswerIndex,
          });
-         console.log(current(state.currentResult))
+         console.log(current(state.currentResult));
       },
 
       addToResults(state) {
@@ -54,9 +59,10 @@ const testSlice = createSlice({
          } else {
             state.results[resultIndex] = result;
          }
-         state.currentQuestionIndex = 0; // new test attempt will be started from first question
+         state.currentQuestionIndex = 0;
          state.currentResult = [];
-         console.log(current(state.results))
+         state.currentResultCounter = 0;
+         console.log(state.results);
       },
    },
 });

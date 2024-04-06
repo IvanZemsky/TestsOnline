@@ -24,7 +24,12 @@
    width: 100%;
    height: 45px;
    border-radius: 30px;
+   border: 2px solid var(--sea-blue);
    overflow: hidden;
+}
+
+:global(.dark) .progressLine{
+   border: none;
 }
 
 .progressLine::-webkit-progress-bar{

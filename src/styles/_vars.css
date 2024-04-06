@@ -1,4 +1,5 @@
 :root{
+   /* colors */
    --default-black: #000;
    --light-black: #151515;
    --light-grey: #3a3a3a;
@@ -10,11 +11,12 @@
    --sea-blue: #84C4FF;
    --super-light-blue: #d1f4ff;
    --invisible-blue: #E0F0FF;
-   --red: #ff5454;
-   --green: #39c539;
+   --red: #da5252;
+   --green: #66c666;
    --gradient-light-blue: #6bb8ff;
    --gradient-purple: #d18cffde;
 
+   /* vars */ 
    --background: var(--white);
    --light-background: var(--invisible-blue);
    --dark-background: var(--super-light-blue);

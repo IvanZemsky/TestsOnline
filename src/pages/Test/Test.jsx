@@ -8,10 +8,10 @@ import {setCurrentTest} from "../../store/slices/testSlice";
 import { testAPI } from "../../services/TestService";
 
 const Test = () => {
+   const dispatch = useDispatch();
+
    let { id } = useParams();
    id = +id;
-
-   const dispatch = useDispatch();
 
    const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
 

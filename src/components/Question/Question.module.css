@@ -6,8 +6,12 @@
    max-width: 908px;
    padding: 38px;
    border-radius: 45px;
-   border: 2px solid var(--white);
+   border: 2px solid var(--sky-blue);
    background-color: var(--background);
+}
+
+:global(.dark) .question{
+   border: 2px solid var(--white);
 }
 
 .questionTitle {
