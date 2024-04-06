@@ -1,29 +1,27 @@
 import React from "react";
 import styles from "./CategoryList.module.css";
 import Category from "../Category/Category";
-import AllCategoriesBtn from "./../UI/AllCategoriesBtn/AllCategoriesBtn";
 
 const categories = [
-   { name: "Все", value: "all"},
-   { name: "Программирование", value: "programming", },
-   { name: "Математика", value: "math", },
-   { name: "Языки", value: "languages", },
-   { name: "История", value: "history", },
+   { name: "Все", value: "all" },
+   { name: "Программирование", value: "programming" },
+   { name: "Математика", value: "math" },
+   { name: "Языки", value: "languages" },
+   { name: "История", value: "history" },
 ];
 
-const CategoryList = () => {
+const CategoryList = ({isWrapped}) => {
+   const wrapStyle = isWrapped ? styles.wrapped : null;
+
    return (
-      <div className={styles.categories}>
-         
+      <form className={[styles.categories, wrapStyle].join(" ")}>
          {categories.map((category) => (
             <Category
                key={category.value}
                category={category}
             />
          ))}
-
-         <AllCategoriesBtn />
-      </div>
+      </form>
    );
 };
 

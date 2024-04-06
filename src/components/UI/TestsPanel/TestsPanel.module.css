@@ -14,3 +14,14 @@
    justify-content: space-between;
    gap: 25px;
 }
+
+.buttons{
+   display: flex;
+   gap: 22px;
+}
+
+@media screen and (max-width: 1175px) {
+   .panelCategories{
+      display: none;
+   }
+}

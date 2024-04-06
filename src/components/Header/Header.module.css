@@ -16,19 +16,6 @@
    gap: 30px;
 }
 
-.logo{
-   display: block;
-   padding: 10px 15px;
-   border-radius: 15px;
-   background-image: var(--gradient);
-   color: var(--white);
-   font-weight: 700;
-}
-
-.logo:hover{
-   background-image: linear-gradient(45deg, var(--gradient-purple), var(--gradient-light-blue))
-}
-
 .links{
    display: flex;
    gap: 25px;
@@ -59,4 +46,10 @@
 .link:hover span{
    background-color: rgba(0,0,0,0);
    color: var(--white);
+}
+
+@media screen and (max-width: 700px) {
+   .content{
+      gap: 20px;
+   }
 }

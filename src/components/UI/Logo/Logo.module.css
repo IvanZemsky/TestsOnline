@@ -1,0 +1,18 @@
+.logo{
+   display: block;
+   padding: 10px 15px;
+   border-radius: 15px;
+   background-image: var(--gradient);
+   color: var(--white);
+   font-weight: 700;
+}
+
+.logo:hover{
+   background-image: linear-gradient(45deg, var(--gradient-purple), var(--gradient-light-blue))
+}
+
+@media screen and (max-width: 500px) {
+   .logo{
+      font-size: 17px;
+   }
+}

@@ -22,7 +22,7 @@ const Category = ({category}) => {
             id={category.value}
             name="category"
             value={category.value}
-            defaultChecked={isChecked}
+            checked={isChecked}
             onChange={() => handleCategoryClick(category.value)}
          />
          <label

@@ -1,8 +1,8 @@
 .categoryText{
    display: block;
-   padding: 10px 15px;
+   padding: 12px 17px;
    border-radius: 20px;
-   border: 2px solid var(--sky-blue);
+   box-shadow: inset 0 0 0 2px var(--sky-blue);
    font-size: 17px;
    font-weight: 500;
    transition: 0.2s all linear;
@@ -11,7 +11,7 @@
 }
 
 .categoryText:hover{
-   box-shadow: inset 0 0 0 1px var(--sky-blue);
+   box-shadow: inset 0 0 0 3px var(--sky-blue);
 }
 
 .categoryRadio{
@@ -21,10 +21,4 @@
 .categoryRadio:checked + .categoryText{
    background-color: var(--sky-blue);
    color: var(--white);
-}
-
-@media screen and (max-width: 1175px) {
-   .category{
-      display: none;
-   }
 }
