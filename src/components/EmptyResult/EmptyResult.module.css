@@ -1,4 +1,4 @@
-.content{
+.emptyResult{
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -6,9 +6,16 @@
    height: 100%;
 }
 
+.content{
+   padding: 30px;
+   border-radius: 25px;
+   background-color: var(--background);
+   border: 2px solid var(--sky-blue);
+}
+
 .title{
    margin-bottom: 25px;
-   font-weight: 700;
+   font-weight: 600;
    color: var(--black);
 }
 
@@ -20,6 +27,7 @@
 .link{
    padding: 15px;
    border: 3px solid var(--sea-blue);
+   border-radius: 15px;
    color: var(--black);
    font-weight: 500;
    transition: 0.2s all linear;

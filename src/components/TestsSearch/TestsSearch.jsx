@@ -3,7 +3,7 @@ import styles from "./TestsSearch.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchText } from "../../store/slices/filterSlice";
 
-const TestsSearch = ({ searchInputValue, setSearchInputValue }) => {
+const TestsSearch = () => {
    const dispatch = useDispatch();
 
    const searchText = useSelector(state => state.filter.filters.searchText)

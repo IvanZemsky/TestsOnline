@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./ResultPage.module.css";
 import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
-import ResultsError from "../../components/ResultsError/ResultsError";
+import EmptyResult from "../../components/EmptyResult/EmptyResult";
 import { testAPI } from "../../services/TestService";
 
 const Result = () => {
@@ -16,9 +16,9 @@ const Result = () => {
 
    const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
 
-   if (!testResults) return <ResultsError testId={id}/>;
+   if (!testResults) return <EmptyResult testId={id}/>
 
-   const resultCounter = testResults.resultCounter;
+   const resultCounter = testResults.resultCounter
 
    return (
       isLoading ? (<p>Loading</p>) :

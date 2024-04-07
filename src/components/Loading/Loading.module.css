@@ -1,0 +1,12 @@
+.loading{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.content{
+   border: 2px solid var(--sky-blue);
+   padding: 15px;
+   border-radius: 15px;
+   background-color: var(--background);
+}

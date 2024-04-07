@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
 import {setCurrentTest} from "../../store/slices/testSlice";
 import { testAPI } from "../../services/TestService";
+import Loading from "../../components/Loading/Loading";
 
 const Test = () => {
    const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Test = () => {
    }, [test]);
 
    return (
-      isLoading ? (<p>Loading</p>) :
+      isLoading ? (<Loading/>) :
       <main className={styles.testPage}>
          <div className={[styles.content, "wrapper"].join(" ")}>
             <h1 className={styles.testName}>{test.name}</h1>
