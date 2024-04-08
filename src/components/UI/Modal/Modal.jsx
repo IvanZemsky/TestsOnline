@@ -1,4 +1,5 @@
 import styles from "./Modal.module.css";
+import Cross from "./../icons/Cross";
 
 const Modal = ({ isActive, setIsActive, children }) => {
    const activeStyle = isActive ? styles.active : null;
@@ -13,6 +14,9 @@ const Modal = ({ isActive, setIsActive, children }) => {
             onClick={(event) => event.stopPropagation()}
          >
             {children}
+            <button className={styles.closeBtn} onClick={() => setIsActive(false)}>
+               <Cross />
+            </button>
          </div>
       </div>
    );

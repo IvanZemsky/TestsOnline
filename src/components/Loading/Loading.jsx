@@ -2,10 +2,8 @@ import styles from './Loading.module.css'
 
 const Loading = () => {
   return (
-    <div className={styles.loading}>
-      <div className={styles.content}>
-         Загрузка
-      </div>
+    <div className={styles.container}>
+      <div className={styles.loader}></div>
     </div>
   )
 }

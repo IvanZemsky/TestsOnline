@@ -5,6 +5,7 @@ import styles from "./ResultPage.module.css";
 import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
 import EmptyResult from "../../components/EmptyResult/EmptyResult";
 import { testAPI } from "../../services/TestService";
+import Loading from "../../components/Loading/Loading";
 
 const Result = () => {
    let { id } = useParams();
@@ -21,7 +22,7 @@ const Result = () => {
    const resultCounter = testResults.resultCounter
 
    return (
-      isLoading ? (<p>Loading</p>) :
+      isLoading ? (<Loading/>) :
       <main className={styles.resultPage}>
          <div className={[styles.content, "wrapper"].join(" ")}>
             <header className={styles.resultHeader}>
