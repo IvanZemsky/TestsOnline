@@ -1,5 +1,4 @@
 .question{
-   padding: 15px;
    margin-bottom: 15px;
    border: 3px solid var(--sky-blue);
    border-left: 10px solid var(--sky-blue);
@@ -18,6 +17,10 @@
 
 .question:last-child{
    margin-bottom: 0;
+}
+
+.selectedAnswer{
+   padding: 15px;
 }
 
 .questionHeader{
@@ -64,10 +67,24 @@
    padding: 0 5px;
 }
 
-.userAnswer{
+.userAnswerText, .rightAnswer{
    font-size: 19px;
+}
+
+.rightAnswer{
+   padding: 5px 15px 15px 15px;
+   border-top: 2px solid var(--red);
 }
 
 .rightAnswer span{
    border-bottom: 1px solid var(--black);
+}
+
+@media screen and (max-width: 550px) {
+   .question{
+      font-size: 16px;
+   }
+   .userAnswerText, .rightAnswer{
+      font-size: 15px;
+   }
 }

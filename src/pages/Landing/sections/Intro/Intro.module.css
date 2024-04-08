@@ -7,7 +7,7 @@
    width: 100%;
    min-height: calc(100vh - 74px - 50px);
    margin: 25px 0;
-   padding: 25px;
+   padding: 35px;
    background-image: var(--gradient);
    border-radius: 55px;
    color: var(--white)
@@ -44,4 +44,19 @@
 
 .link:hover{
    text-decoration: underline;
+}
+
+@media screen and (max-width: 550px) {
+   .intro{
+      padding: 18px;
+   }
+   .title{
+      font-size: 20px;
+   }
+   .info{
+      width: 100%;
+   }
+   .info, .link{
+      font-size: 15px;
+   }
 }

@@ -9,6 +9,7 @@ const Question = ({ test }) => {
    );
 
    const currentQuestion = test.questions[currentQuestionIndex];
+   console.log(currentQuestion)
 
    return (
       <section className={styles.question}>

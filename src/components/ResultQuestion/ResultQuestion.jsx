@@ -12,18 +12,20 @@ const ResultQuestion = ({ question, results, index }) => {
 
    return (
       <li className={[styles.question, answerStatusStyle].join(" ")}>
-         <header className={styles.questionHeader}>
-            <p className={[styles.questionNumber, answerStatusStyle].join(" ")}>
-               {index + 1}
-            </p>
-            <p className={styles.questionName}>{question.title}</p>
-         </header>
+         <div className={styles.selectedAnswer}>
+            <header className={styles.questionHeader}>
+               <p className={[styles.questionNumber, answerStatusStyle].join(" ")}>
+                  {index + 1}
+               </p>
+               <p className={styles.questionName}>{question.title}</p>
+            </header>
 
-         <div className={styles.answerWrap}>
-            <p className={styles.userAnswer}>
-               Ваш ответ:{" "}
-               {question.answers[results[index]?.selectedAnswerIndex]}
-            </p>
+            <div className={styles.answerWrap}>
+               <p className={styles.userAnswerText}>
+                  Ваш ответ:{" "}
+                  {question.answers[results[index]?.selectedAnswerIndex]}
+               </p>
+            </div>
          </div>
          {!isAnswerCorrect && (
             <p className={styles.rightAnswer}>
