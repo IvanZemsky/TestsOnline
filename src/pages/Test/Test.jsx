@@ -7,7 +7,7 @@ import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
 import {setCurrentTest} from "../../store/slices/testSlice";
 import { testAPI } from "../../services/TestService";
 import Loading from "../../components/Loading/Loading";
-import Wrapper from './../../components/UI/Wrapper/Wrapper';
+import Wrapper from '../../components/UI/Wrapper/Wrapper';
 
 const Test = () => {
    const dispatch = useDispatch();
@@ -15,32 +15,37 @@ const Test = () => {
    let { id } = useParams();
    id = +id;
 
-   const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
-
-   if (error) return <p>Ошибка</p>
-
-   const currentQuestionIndex = useSelector(
-      (state) => state.test.currentQuestionIndex
-   );
+   const { data: test, error, isLoading } = testAPI.useFetchTestQuery(id);
 
    useEffect(() => {
-      dispatch(setCurrentTest(test));
-   }, [test]);
+      if (test && !isLoading) {
+         dispatch(setCurrentTest(test));
+      }
+   }, [dispatch, test]);
+
+   const currentQuestionIndex = useSelector((state) => state.test.currentQuestionIndex);
+
+   if (isLoading) {
+      return <Loading />;
+   }
+
+   if (error) {
+      return <p>Ошибка</p>;
+   }
 
    return (
-      isLoading ? (<Loading/>) :
       <main className={styles.testPage}>
          <Wrapper>
-         <div className={styles.content}>
-            <h1 className={styles.testName}>{test.name}</h1>
+            <div className={styles.content}>
+               <h1 className={styles.testName}>{test.name}</h1>
 
-            <Question test={test} />
+               <Question test={test} />
 
-            <ProgressLine
-               questionNumber={currentQuestionIndex + 1}
-               questionAmount={test.questions.length}
-            />
-         </div>
+               <ProgressLine
+                  questionNumber={currentQuestionIndex + 1}
+                  questionAmount={test.questions.length}
+               />
+            </div>
          </Wrapper>
       </main>
    );
