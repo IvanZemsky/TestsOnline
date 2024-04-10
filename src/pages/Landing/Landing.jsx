@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./Landing.module.css";
 import Intro from "./sections/Intro/Intro";
+import Wrapper from "../../components/UI/Wrapper/Wrapper";
 
 const Landing = () => {
    return (
-      <main className="wrapper">
-         <Intro />
-      </main>
+      <Wrapper>
+         <main>
+            <Intro />
+         </main>
+      </Wrapper>
    );
 };
 

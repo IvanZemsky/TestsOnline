@@ -20,3 +20,10 @@
 .categoriesBtn:hover svg{
    fill: var(--white);
 }
+
+@media screen and (max-width: 450px) {
+   .categoriesBtn{
+      width: 37px;
+      height: 37px;
+   }
+}

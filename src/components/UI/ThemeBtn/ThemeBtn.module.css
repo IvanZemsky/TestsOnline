@@ -1,5 +1,13 @@
+.themeBtn{
+   padding: 2px;
+   border: 2px solid var(--border-light);
+   background-color: var(--background);
+   border-radius: 50%;
+}
+
 .themeBtn svg{
-   width: 37px;
-   height: 37px;
-   fill: red;
+   width: 30px;
+   height: 30px;
+   fill: var(--border-light);
+   stroke: var(--border-light);
 }

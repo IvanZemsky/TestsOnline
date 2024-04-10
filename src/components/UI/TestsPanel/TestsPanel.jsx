@@ -4,26 +4,27 @@ import CategoryList from "../../CategoryList/CategoryList";
 import AllCategoriesBtn from './../AllCategoriesBtn/AllCategoriesBtn';
 import Modal from './../Modal/Modal';
 import { useState } from "react";
+import Wrapper from './../Wrapper/Wrapper';
 
 const TestsPanel = () => {
    const [isActive, setIsActive] = useState(false);
 
    return (
       <div className={styles.panel}>
-         <div className={[styles.content, "wrapper"].join(" ")}>
+         <Wrapper additonalStyles={[styles.content]}>
             <TestsSearch />
             <div className={styles.buttons}>
                <div className={styles.panelCategories}>
-                  <CategoryList/>
+                  <CategoryList amount={[0, 1, 2, 3, 4]}/>
                </div>
                <AllCategoriesBtn setIsActive={setIsActive}/>
             </div>
-         </div>
+         </Wrapper>
 
          <Modal isActive={isActive} setIsActive={setIsActive}>
-            <CategoryList isWrapped={true}/>
+            <CategoryList amount="all" isWrapped={true}/>
          </Modal>
-
+         
       </div>
    );
 };

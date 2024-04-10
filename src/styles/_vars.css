@@ -24,6 +24,7 @@
    --super-text: var(--default-black);
    --dark-text: var(--blue);
    --gradient: linear-gradient(45deg, var(--gradient-light-blue), var(--gradient-purple));
+   --border-light: var(--sky-blue);
 
    --selected-answer: var(--sea-blue);
    --checked-answer: var(--sky-blue);
@@ -37,6 +38,7 @@
    --text: #e8e8e8;
    --dark-text: var(--white);
    --super-text: var(--white);
+   --border-light: var(--white);
 
    --gradient-light-blue: #6f9bff;
    --gradient-purple: #c164ffde;

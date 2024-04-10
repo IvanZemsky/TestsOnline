@@ -7,8 +7,6 @@ export default function SunIcon() {
          viewBox="0 0 24 24"
       >
          <path
-            fill="none"
-            stroke="#000"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}

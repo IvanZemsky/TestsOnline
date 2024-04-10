@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Category.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { setCategory } from "../../store/slices/filterSlice";

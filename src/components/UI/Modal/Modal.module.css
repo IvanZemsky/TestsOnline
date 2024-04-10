@@ -33,9 +33,13 @@
 
 .closeBtn{
    position: absolute;
-   top: 25px;
+   top: 15px;
    right: 15px;
    padding: 8px;
    border-radius: 50px;
    background-color: rgb(195, 195, 195);
+}
+
+:global(.dark) .closeBtn{
+   background-color: var(--light-grey);
 }

@@ -5,6 +5,7 @@ import EmptyTests from "../../components/EmptyTests/EmptyTests";
 import useFilter from "../../hooks/useFilter";
 import TestsPanel from './../../components/UI/TestsPanel/TestsPanel';
 import Loading from "../../components/Loading/Loading";
+import Wrapper from './../../components/UI/Wrapper/Wrapper';
 
 const Tests = () => {
    const { previews, error, isLoading } = useFilter();
@@ -14,16 +15,16 @@ const Tests = () => {
          <TestsPanel />
          
          {isLoading ? <Loading/> : (
-         <div className={[styles.testsContent, "wrapper"].join(" ")}>
-            <div className={styles.testCards}>
-               {previews && previews.length ?
-                  previews.map((preview) => 
-                     <TestCard key={preview.id} test={preview} />
-                  )
-                : <EmptyTests />
-               }
-            </div>
-         </div>)}
+            <Wrapper additonalStyles={[styles.testsContent]}>
+               <div className={styles.testCards}>
+                  {previews && previews.length && !error ?
+                     previews.map((preview) => 
+                        <TestCard key={preview.id} test={preview} />
+                     )
+                  : <EmptyTests />
+                  }
+               </div>
+            </Wrapper>)}
          
       </main>
    );

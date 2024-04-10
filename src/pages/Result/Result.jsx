@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./ResultPage.module.css";
@@ -6,6 +5,7 @@ import ResultQuestion from "../../components/ResultQuestion/ResultQuestion";
 import EmptyResult from "../../components/EmptyResult/EmptyResult";
 import { testAPI } from "../../services/TestService";
 import Loading from "../../components/Loading/Loading";
+import Wrapper from "./../../components/UI/Wrapper/Wrapper";
 
 const Result = () => {
    let { id } = useParams();
@@ -15,16 +15,15 @@ const Result = () => {
       (result) => result.testId === id
    );
 
-   const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
+   const { data: test, error, isLoading } = testAPI.useFetchTestQuery(id);
 
-   if (!testResults) return <EmptyResult testId={id}/>
+   if (!testResults) return <EmptyResult testId={id} />;
 
-   const resultCounter = testResults.resultCounter
+   const resultCounter = testResults.resultCounter;
 
-   return (
-      isLoading ? (<Loading/>) :
-      <main className={styles.resultPage}>
-         <div className={[styles.content, "wrapper"].join(" ")}>
+   return isLoading ? <Loading /> : (
+      <Wrapper>
+         <main className={styles.resultPage}>
             <header className={styles.resultHeader}>
                <h1 className={styles.testName}>{test.name}</h1>
                <p className={styles.resultCounter}>
@@ -42,8 +41,8 @@ const Result = () => {
                   />
                ))}
             </ul>
-         </div>
-      </main>
+         </main>
+      </Wrapper>
    );
 };
 

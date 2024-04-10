@@ -11,3 +11,10 @@
 .testsSearch::placeholder{
    color: #c0c0c0;
 }
+
+@media screen and (max-width: 450px) {
+   .testsSearch{
+      padding: 7px 9px;
+      font-size: 15px;
+   }
+}

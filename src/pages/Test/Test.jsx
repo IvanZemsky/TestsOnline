@@ -7,6 +7,7 @@ import ProgressLine from "../../components/UI/ProgressLine/ProgressLine";
 import {setCurrentTest} from "../../store/slices/testSlice";
 import { testAPI } from "../../services/TestService";
 import Loading from "../../components/Loading/Loading";
+import Wrapper from './../../components/UI/Wrapper/Wrapper';
 
 const Test = () => {
    const dispatch = useDispatch();
@@ -15,6 +16,8 @@ const Test = () => {
    id = +id;
 
    const {data: test, error, isLoading} = testAPI.useFetchTestQuery(id)
+
+   if (error) return <p>Ошибка</p>
 
    const currentQuestionIndex = useSelector(
       (state) => state.test.currentQuestionIndex
@@ -27,7 +30,8 @@ const Test = () => {
    return (
       isLoading ? (<Loading/>) :
       <main className={styles.testPage}>
-         <div className={[styles.content, "wrapper"].join(" ")}>
+         <Wrapper>
+         <div className={styles.content}>
             <h1 className={styles.testName}>{test.name}</h1>
 
             <Question test={test} />
@@ -37,6 +41,7 @@ const Test = () => {
                questionAmount={test.questions.length}
             />
          </div>
+         </Wrapper>
       </main>
    );
 };
