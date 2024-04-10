@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/TestsOnline/static/css/main.2c02e7ac.css",
-    "main.js": "/TestsOnline/static/js/main.2c7937dc.js",
+    "main.js": "/TestsOnline/static/js/main.f970bb3d.js",
     "static/css/856.c24e2296.chunk.css": "/TestsOnline/static/css/856.c24e2296.chunk.css",
     "static/js/856.f6616a70.chunk.js": "/TestsOnline/static/js/856.f6616a70.chunk.js",
     "static/css/852.07d4632b.chunk.css": "/TestsOnline/static/css/852.07d4632b.chunk.css",
-    "static/js/852.0acad00d.chunk.js": "/TestsOnline/static/js/852.0acad00d.chunk.js",
+    "static/js/852.51ecb9bb.chunk.js": "/TestsOnline/static/js/852.51ecb9bb.chunk.js",
     "static/css/828.8889595d.chunk.css": "/TestsOnline/static/css/828.8889595d.chunk.css",
     "static/js/828.03ee0c19.chunk.js": "/TestsOnline/static/js/828.03ee0c19.chunk.js",
     "static/css/844.790adf78.chunk.css": "/TestsOnline/static/css/844.790adf78.chunk.css",
@@ -17,11 +17,11 @@
     "static/media/Montserrat-Regular.ttf": "/TestsOnline/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "index.html": "/TestsOnline/index.html",
     "main.2c02e7ac.css.map": "/TestsOnline/static/css/main.2c02e7ac.css.map",
-    "main.2c7937dc.js.map": "/TestsOnline/static/js/main.2c7937dc.js.map",
+    "main.f970bb3d.js.map": "/TestsOnline/static/js/main.f970bb3d.js.map",
     "856.c24e2296.chunk.css.map": "/TestsOnline/static/css/856.c24e2296.chunk.css.map",
     "856.f6616a70.chunk.js.map": "/TestsOnline/static/js/856.f6616a70.chunk.js.map",
     "852.07d4632b.chunk.css.map": "/TestsOnline/static/css/852.07d4632b.chunk.css.map",
-    "852.0acad00d.chunk.js.map": "/TestsOnline/static/js/852.0acad00d.chunk.js.map",
+    "852.51ecb9bb.chunk.js.map": "/TestsOnline/static/js/852.51ecb9bb.chunk.js.map",
     "828.8889595d.chunk.css.map": "/TestsOnline/static/css/828.8889595d.chunk.css.map",
     "828.03ee0c19.chunk.js.map": "/TestsOnline/static/js/828.03ee0c19.chunk.js.map",
     "844.790adf78.chunk.css.map": "/TestsOnline/static/css/844.790adf78.chunk.css.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.2c02e7ac.css",
-    "static/js/main.2c7937dc.js"
+    "static/js/main.f970bb3d.js"
   ]
 }
